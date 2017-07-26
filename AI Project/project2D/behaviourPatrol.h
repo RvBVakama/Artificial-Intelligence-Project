@@ -9,7 +9,7 @@ public:
 	behaviourPatrol();
 	~behaviourPatrol();
 
-	Vector2 Calculate(Agent* pAgent, float deltaTime);	
+	Vector2 Calculate(Agent* pAgent, float deltaTime);
 
 private:
 	AStar*				m_pAStar;
