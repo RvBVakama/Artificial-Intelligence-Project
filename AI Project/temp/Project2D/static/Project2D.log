@@ -1,0 +1,36 @@
+﻿  stateMovement.cpp
+  StateMachine.cpp
+  stateIdle.cpp
+  stateAgent.cpp
+  SeekBehaviour.cpp
+c:\users\rvbvakama\downloads\rvbvakama-master\astar\project2d\seekbehaviour.cpp(20): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+  Player.cpp
+  main.cpp
+  IBehaviour.cpp
+  Grid.cpp
+  FleeBehaviour.cpp
+  Entity.cpp
+  DecisionTree.cpp
+  DecisionPrint.cpp
+  DecisionNothingPressed.cpp
+  DecisionButtonPressed.cpp
+  CompositeNode.cpp
+  CollisionManager.cpp
+  Collider.cpp
+  behaviourPatrol.cpp
+  BaseState.cpp
+  Generating Code...
+  Compiling...
+  AStar.cpp
+  Application2D.cpp
+  AIStateMachine.cpp
+  AIBehaviourTree.cpp
+  AIBaseState.cpp
+  Agent.cpp
+  Generating Code...
+LINK : warning LNK4098: defaultlib 'MSVCRT' conflicts with use of other libs; use /NODEFAULTLIB:library
+MathLibrary.lib(Matrix3.obj) : warning LNK4099: PDB 'MathLibrary.pdb' was not found with 'MathLibrary.lib(Matrix3.obj)' or at 'C:\Users\RvBVakama\Downloads\RvBVakama-master\AStar\temp\Project2D\static\MathLibrary.pdb'; linking object as if no debug info
+MathLibrary.lib(Vector2.obj) : warning LNK4099: PDB 'MathLibrary.pdb' was not found with 'MathLibrary.lib(Vector2.obj)' or at 'C:\Users\RvBVakama\Downloads\RvBVakama-master\AStar\temp\Project2D\static\MathLibrary.pdb'; linking object as if no debug info
+MathLibrary.lib(Vector3.obj) : warning LNK4099: PDB 'MathLibrary.pdb' was not found with 'MathLibrary.lib(Vector3.obj)' or at 'C:\Users\RvBVakama\Downloads\RvBVakama-master\AStar\temp\Project2D\static\MathLibrary.pdb'; linking object as if no debug info
+  Project2D.vcxproj -> C:\Users\RvBVakama\Downloads\RvBVakama-master\AStar\temp\Project2D\static\Project2D.exe
+  Project2D.vcxproj -> C:\Users\RvBVakama\Downloads\RvBVakama-master\AStar\temp\Project2D\static\Project2D.pdb (Full PDB)
