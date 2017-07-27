@@ -24,7 +24,7 @@ public:
 			// Sets the parent node
 			int parentNode = GetParentIndex(currentNode);
 
-			// If 
+			
 			if (m_Data[currentNode]->m_nFScore < m_Data[parentNode]->m_nFScore)
 			{
 				AStarNode* swap = m_Data[currentNode];
@@ -101,7 +101,7 @@ public:
 		return (2 * parentIndex) + whichIndex;
 	}
 
-	/*bool Contains(AStarNode* pData)
+	bool Contains(AStarNode* pData)
 	{
 		for (size_t i = 0; i < m_Data.size(); ++i)
 		{
@@ -109,9 +109,9 @@ public:
 				return true;
 		}
 		return false;
-	}*/
+	}
 	
-	int Contains(AStarNode* pData)
+	/*int Contains(AStarNode* pData)
 	{
 		//runs for the amount of nodes there are
 		for (size_t i = 0; i < m_Data.size(); ++i)
@@ -125,28 +125,28 @@ public:
 				return -1;
 			}
 		}
-	}
+	}*/
 
-	void Resort(int index)
-	{
-		if (index == 0)
-			return;
+	//void Resort(int index)
+	//{
+	//	if (index == 0)
+	//		return;
 
-		int nNodeIndex = index;
-		int nParent = GetParentIndex(index);
+	//	int nNodeIndex = index;
+	//	int nParent = GetParentIndex(index);
+	//	
+	//	//Check if node has a lower F value than parent, if so then swap.
+	//	while (nParent >= 0 && m_Data[nNodeIndex]->m_nFScore < m_Data[nParent]->m_nFScore)
+	//	{
+	//		//Swap
+	//		AStarNode* temp = m_Data[nParent];
+	//		m_Data[nParent] = m_Data[nNodeIndex];
+	//		m_Data[nNodeIndex] = temp;
 
-		//Check if node has a lower F value than parent, if so then swap.
-		while (nParent >= 0 && m_aList[nNodeIndex].m_nF < m_aList[nParent].m_nF)
-		{
-			//Swap
-			AStarNode temp = m_aList[nParent];
-			m_aList[nParent] = m_aList[nNodeIndex];
-			m_aList[nNodeIndex] = temp;
-
-			nNodeIndex = nParent;
-			nParent = GetParent(nNodeIndex);
-		}
-	}
+	//		nNodeIndex = nParent;
+	//		nParent = GetParentIndex(nNodeIndex);
+	//	}
+	//}
 
 private:
 	vector<AStarNode*> m_Data;

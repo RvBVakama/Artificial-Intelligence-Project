@@ -7,7 +7,7 @@
 #define GRID_SPACING 0
 #define ADJACENT_COST 10
 #define DIAGONAL_COST 14
-#define EDGE_THICKNESS 0.0f
+#define EDGE_THICKNESS 1.0f
 
 //------------------------------------------------
 // List of states that are used in the game

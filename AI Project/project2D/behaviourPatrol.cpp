@@ -20,8 +20,6 @@ int DiagonalHeurisitic(AStarNode* pNode, AStarNode* pEnd)
 
 behaviourPatrol::behaviourPatrol()
 {
-	//m_ppGrid = ppGrid;
-
 	//Setup AStar
 	m_pAStar = new AStar(GRID_SIZE * GRID_SIZE);
 
@@ -46,6 +44,7 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 	Vector2 dest = ((GridNode*)m_path[m_nNextNode])->m_v2Pos;
 	Vector2 dist = dest - pAgent->GetPosition();
 	float fDist = dist.Magnitude();
+
 	if (fDist < 10)
 	{
 		++m_nNextNode;
@@ -59,4 +58,17 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 	Vector2 dir = dest - pAgent->GetPosition();
 	dir.Normalise();
 	return dir * 200.0f * deltaTime;
+}
+
+void behaviourPatrol::OnDraw(Renderer2D* pRenderer2D)
+{
+	//Draw Path
+	for (size_t i = 0; i < m_path.size(); ++i)
+	{
+		GridNode* pNode = (GridNode*)m_path[i];
+
+		pRenderer2D->setRenderColour(0x00FF00FF);
+		pRenderer2D->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 0.9f, NODE_SIZE / 0.9f);
+		pRenderer2D->setRenderColour(0xFFFFFFFF);
+	}
 }

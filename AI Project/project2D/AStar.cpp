@@ -94,7 +94,7 @@ bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>
 					pNeighbour->m_pPrev = pCurrentNode;
 				
 					//Sort Heap
-					m_OpenList.Resort(heapIndex);
+					//m_OpenList.Resort(heapIndex);
 				}
 			}
 				//else (neighbour not in open list)

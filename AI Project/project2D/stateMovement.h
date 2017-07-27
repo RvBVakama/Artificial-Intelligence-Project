@@ -1,6 +1,8 @@
 #pragma once
 #include "AIBaseState.h"
 
+class behaviourPatrol;
+
 class stateMovement : public AIBaseState
 {
 public:
@@ -11,4 +13,7 @@ public:
 	void OnUpdate(Agent* pAgent, float fDeltaTime);
 	void OnDraw(Renderer2D* renderer2d);
 	void OnExit();
+
+private:
+	behaviourPatrol* m_behaviourPatrol;
 };

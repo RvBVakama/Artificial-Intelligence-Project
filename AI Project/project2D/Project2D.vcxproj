@@ -181,7 +181,6 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
     <ClCompile Include="stateAgent.cpp" />
     <ClCompile Include="stateIdle.cpp" />
@@ -221,7 +220,6 @@
     <ClInclude Include="IBehaviour.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListNode.h" />
-    <ClInclude Include="Player.h" />
     <ClInclude Include="Question.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />

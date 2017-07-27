@@ -1,34 +1,3 @@
-﻿  main.cpp
-d:\git - rvbvakama\ai project\project2d\heap.h(128): error C2440: 'initializing': cannot convert from 'AStarNode *' to 'int'
-  d:\git - rvbvakama\ai project\project2d\heap.h(128): note: There is no context in which this conversion is possible
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2228: left of '.m_nF' must have class/struct/union
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2512: 'AStarNode': no appropriate default constructor available
-  d:\git - rvbvakama\ai project\project2d\astarnode.h(17): note: see declaration of 'AStarNode'
-d:\git - rvbvakama\ai project\project2d\heap.h(135): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(136): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(139): error C3861: 'GetParent': identifier not found
-  behaviourPatrol.cpp
-d:\git - rvbvakama\ai project\project2d\heap.h(128): error C2440: 'initializing': cannot convert from 'AStarNode *' to 'int'
-  d:\git - rvbvakama\ai project\project2d\heap.h(128): note: There is no context in which this conversion is possible
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2228: left of '.m_nF' must have class/struct/union
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2512: 'AStarNode': no appropriate default constructor available
-  d:\git - rvbvakama\ai project\project2d\astarnode.h(17): note: see declaration of 'AStarNode'
-d:\git - rvbvakama\ai project\project2d\heap.h(135): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(136): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(139): error C3861: 'GetParent': identifier not found
-  AStar.cpp
-d:\git - rvbvakama\ai project\project2d\heap.h(128): error C2440: 'initializing': cannot convert from 'AStarNode *' to 'int'
-  d:\git - rvbvakama\ai project\project2d\heap.h(128): note: There is no context in which this conversion is possible
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(131): error C2228: left of '.m_nF' must have class/struct/union
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(134): error C2512: 'AStarNode': no appropriate default constructor available
-  d:\git - rvbvakama\ai project\project2d\astarnode.h(17): note: see declaration of 'AStarNode'
-d:\git - rvbvakama\ai project\project2d\heap.h(135): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(136): error C2065: 'm_aList': undeclared identifier
-d:\git - rvbvakama\ai project\project2d\heap.h(139): error C3861: 'GetParent': identifier not found
-  Generating Code...
+﻿  stateMovement.cpp
+  Project2D.vcxproj -> D:\Git - RvBVakama\AI Project\temp\Project2D\static\Project2D.exe
+  Project2D.vcxproj -> D:\Git - RvBVakama\AI Project\temp\Project2D\static\Project2D.pdb (Full PDB)
