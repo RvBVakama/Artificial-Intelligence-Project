@@ -8,6 +8,7 @@ using namespace aie;
 
 class AIStateMachine;
 class stateMovement;
+class statePathFind;
 class stateIdle;
 
 class stateAgent : public Agent
@@ -25,5 +26,6 @@ private:
 	
 	AIStateMachine*		m_pAIStateMachine;
 	stateMovement*		m_pstateMovement;
+	statePathFind*		m_pstatePathFind;
 	stateIdle*			m_pStateIdle;
 };

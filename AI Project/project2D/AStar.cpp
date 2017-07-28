@@ -115,9 +115,7 @@ bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>
 
 				//Add neighbour to open list.
 				m_OpenList.Push(pNeighbour);
-
 			}
-
 		}
 	}
 
