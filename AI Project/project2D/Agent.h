@@ -6,7 +6,8 @@
 
 using namespace aie;
 
-class stateAgent;
+class Player_Mouse;
+class Player_PathFind;
 
 class Agent
 {
@@ -24,7 +25,8 @@ public:
 protected:
 	std::vector<IBehaviour *> m_behaviours;
 
-	stateAgent* m_pStateAgent;
+	Player_Mouse* m_pPlayer_Mouse;
+	Player_PathFind* m_pPlayer_PathFind;
 
 	Vector2 m_v2Pos;
 	Vector2 m_v2Velocity;

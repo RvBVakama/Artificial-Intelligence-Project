@@ -1,8 +1,6 @@
 #pragma once
 #include "AIBaseState.h"
 
-class behaviourPatrol;
-
 class stateMovement : public AIBaseState
 {
 public:
@@ -15,5 +13,4 @@ public:
 	void OnExit();
 
 private:
-	behaviourPatrol* m_behaviourPatrol;
 };

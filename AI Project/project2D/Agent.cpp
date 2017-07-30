@@ -1,4 +1,6 @@
 #include "Agent.h"
+#include "Player_Mouse.h"
+#include "Player_PathFind.h"
 
 Agent::Agent()
 {

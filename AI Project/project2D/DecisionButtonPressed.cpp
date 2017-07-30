@@ -7,19 +7,20 @@ DecisionButtonPressed::DecisionButtonPressed()
 {
 }
 
-
 DecisionButtonPressed::~DecisionButtonPressed()
 {
 }
 
-void DecisionButtonPressed::MakeDecision(Entity * pEntity, float fDeltaTime)
+void DecisionButtonPressed::MakeDecision(Entity* pEntity, float fDeltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_SPACE))
 	{
-		m_pTrueDecision->MakeDecision(pEntity, fDeltaTime);
+		m_pWanderDecision->MakeDecision(pEntity, fDeltaTime);
+		//m_pTrueDecision->MakeDecision(pEntity, fDeltaTime);
 	}
 	else
 	{
-		m_pFalseDecision->MakeDecision(pEntity, fDeltaTime);
+		m_pIdleDecision->MakeDecision(pEntity, fDeltaTime);
+		//m_pFalseDecision->MakeDecision(pEntity, fDeltaTime);
 	}
 }

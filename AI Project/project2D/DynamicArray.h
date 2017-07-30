@@ -93,7 +93,6 @@ public:
 	int Insert(int index, T value)
 	{
 		_ASSERT(index <= m_nUsed);
-
 		if (index > m_nUsed)
 			return OUT_OF_BOUNDS;
 

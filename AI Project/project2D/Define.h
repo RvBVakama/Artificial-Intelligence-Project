@@ -1,22 +1,46 @@
 #pragma once
 
+//------------------------------------------------
+// App Values
+//------------------------------------------------
 #define SCREENX 900
 #define SCREENY 900
+
+//------------------------------------------------
+// AStar Grid Values
+//------------------------------------------------
 #define GRID_SIZE 30
 #define NODE_SIZE 30
 #define GRID_SPACING 0
 #define ADJACENT_COST 10
 #define DIAGONAL_COST 14
+
+//------------------------------------------------
+// AStar Debuging
+//------------------------------------------------
 #define EDGE_THICKNESS 1.0f
 
 //------------------------------------------------
-// List of states that are used in the game
+// Wander Behaviour
 //------------------------------------------------
-enum STATES
+#define CIRCLE_DISTANCE 120.0f
+#define CIRCLE_RADIUS 80.0f
+
+//------------------------------------------------
+// List of some state/s that are used in the app
+//------------------------------------------------
+enum PLAYER_MOUSE_STATES
 {
 	E_STATEMOVEMENT,
-	E_STATEPATHFIND,
 	E_STATEIDLE
+};
+
+//------------------------------------------------
+// List of some state/s that are used in the app
+//------------------------------------------------
+enum PLAYER_PATHFIND_STATES
+{
+	E_STATEPATHFIND,
 };
 
 //------------------------------------------------

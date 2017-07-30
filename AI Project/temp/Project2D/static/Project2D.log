@@ -1,5 +1,2 @@
-﻿  stateAgent.cpp
-  behaviourPatrol.cpp
-  Generating Code...
-  Project2D.vcxproj -> D:\Git - RvBVakama\AI Project\temp\Project2D\static\Project2D.exe
-  Project2D.vcxproj -> D:\Git - RvBVakama\AI Project\temp\Project2D\static\Project2D.pdb (Full PDB)
+﻿  behaviourWander.cpp
+d:\git - rvbvakama\ai project\project2d\behaviourwander.cpp(47): error C2059: syntax error: '}'

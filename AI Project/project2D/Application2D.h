@@ -7,9 +7,10 @@ struct GridNode;
 class AStar;
 class StateMachine;
 class Agent;
-class stateAgent;
+class Player_Mouse;
+class Player_PathFind;
+//Decision Implementation
 class DecisionTree;
-class Player;
 
 class Application2D : public aie::Application {
 public:
@@ -27,12 +28,11 @@ private:
 	aie::Renderer2D*	m_2dRenderer;
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
-	//Agent*				m_pAgent;
-	stateAgent*			m_pStateAgent;
 	StateMachine*		m_pStateMachine;
-	Player*				m_pPlayer;
+	Player_Mouse*		m_pPlayer_Mouse;
+	Player_PathFind*	m_pPlayer_PathFind;
+	//Decision Implementation
 	DecisionTree*		m_pDecisionTree;
 	
-
 	float m_cameraX, m_cameraY;
 };

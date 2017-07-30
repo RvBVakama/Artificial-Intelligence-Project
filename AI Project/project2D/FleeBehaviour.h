@@ -10,5 +10,4 @@ public:
 	~FleeBehaviour();
 
 	Vector2 Calculate(Agent* pAgent, float fDeltaTime);
-
 };

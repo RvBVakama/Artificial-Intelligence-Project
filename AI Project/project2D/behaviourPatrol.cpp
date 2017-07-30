@@ -39,7 +39,7 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 
 	Grid* pGrid = Grid::getInstance();
 
-	m_pAStar->CalculatePath(pGrid->GetNode(1), pGrid->GetNode(899), &m_path);
+	m_pAStar->CalculatePath(pGrid->GetNode(871), pGrid->GetNode(899), &m_path);
 	
 	Vector2 dest = ((GridNode*)m_path[m_nNextNode])->m_v2Pos;
 	Vector2 dist = dest - pAgent->GetPosition();
