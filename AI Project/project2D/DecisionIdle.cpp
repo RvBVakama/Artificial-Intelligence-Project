@@ -8,7 +8,7 @@ DecisionIdle::~DecisionIdle()
 {
 }
 
-void DecisionIdle::MakeDecision(Entity* pEntity, float fDeltaTime)
+void DecisionIdle::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 
 }

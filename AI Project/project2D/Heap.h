@@ -101,7 +101,7 @@ public:
 		return (2 * parentIndex) + whichIndex;
 	}
 
-	bool Contains(AStarNode* pData)
+	/*bool Contains(AStarNode* pData)
 	{
 		for (size_t i = 0; i < m_Data.size(); ++i)
 		{
@@ -109,9 +109,9 @@ public:
 				return true;
 		}
 		return false;
-	}
+	}*/
 	
-	/*int Contains(AStarNode* pData)
+	int Contains(AStarNode* pData)
 	{
 		//runs for the amount of nodes there are
 		for (size_t i = 0; i < m_Data.size(); ++i)
@@ -120,33 +120,30 @@ public:
 			{
 				return i;
 			}
-			else
-			{
-				return -1;
-			}
 		}
-	}*/
+		return -1;
+	}
 
-	//void Resort(int index)
-	//{
-	//	if (index == 0)
-	//		return;
+	void Resort(int index)
+	{
+		if (index == 0)
+			return;
 
-	//	int nNodeIndex = index;
-	//	int nParent = GetParentIndex(index);
-	//	
-	//	//Check if node has a lower F value than parent, if so then swap.
-	//	while (nParent >= 0 && m_Data[nNodeIndex]->m_nFScore < m_Data[nParent]->m_nFScore)
-	//	{
-	//		//Swap
-	//		AStarNode* temp = m_Data[nParent];
-	//		m_Data[nParent] = m_Data[nNodeIndex];
-	//		m_Data[nNodeIndex] = temp;
+		int nNodeIndex = index;
+		int nParent = GetParentIndex(index);
+		
+		//Check if node has a lower F value than parent, if so then swap.
+		while (nParent >= 0 && m_Data[nNodeIndex]->m_nFScore < m_Data[nParent]->m_nFScore)
+		{
+			//Swap
+			AStarNode* temp = m_Data[nParent];
+			m_Data[nParent] = m_Data[nNodeIndex];
+			m_Data[nNodeIndex] = temp;
 
-	//		nNodeIndex = nParent;
-	//		nParent = GetParentIndex(nNodeIndex);
-	//	}
-	//}
+			nNodeIndex = nParent;
+			nParent = GetParentIndex(nNodeIndex);
+		}
+	}
 
 private:
 	vector<AStarNode*> m_Data;

@@ -22,6 +22,9 @@ public:
 	Vector2 GetPosition() { return m_v2Pos; }
 	void SetPosition(Vector2 v2Pos) { m_v2Pos = v2Pos; }
 
+	Vector2 GetVelocity() { return m_v2Velocity; }
+	void SetVelocity(Vector2 v2Vel) { m_v2Velocity = v2Vel; }
+
 protected:
 	std::vector<IBehaviour *> m_behaviours;
 

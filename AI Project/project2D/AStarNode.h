@@ -37,7 +37,6 @@ struct AStarNode
 	int m_nGScore;
 	int m_nHScore;
 	int m_nFScore;
-
 	int m_nIndex;
 	bool m_bBlocked;
 

@@ -7,5 +7,5 @@ public:
 	DecisionIdle();
 	virtual ~DecisionIdle();
 
-	void MakeDecision(Entity* pEntity, float fDeltaTime);
+	void MakeDecision(Agent* pAgent, float fDeltaTime);
 };

@@ -7,7 +7,7 @@ public:
 	DecisionTree();
 	~DecisionTree();
 
-	void Update(Entity* pEntity, float fDeltaTime);
+	void Update(Agent* pAgent, float fDeltaTime);
 	
 private:
 	DecisionQuestion* m_pRoot;

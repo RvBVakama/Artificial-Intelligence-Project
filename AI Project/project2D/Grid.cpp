@@ -129,9 +129,9 @@ void Grid::Draw(Renderer2D* m_2dRenderer)
 	for (int i = 0; i < GRID_SIZE * GRID_SIZE; ++i)
 	{
 		if (m_ppGrid[i]->m_bBlocked)
-			m_2dRenderer->setRenderColour(0x003366FF);
+			m_2dRenderer->setRenderColour(0x501726FF);
 		else
-			m_2dRenderer->setRenderColour(0xB2E076FF);
+			m_2dRenderer->setRenderColour(0xACA380FF);
 
 		float x = m_ppGrid[i]->m_v2Pos.x;
 		float y = m_ppGrid[i]->m_v2Pos.y;
@@ -152,7 +152,7 @@ void Grid::Draw(Renderer2D* m_2dRenderer)
 	}
 }
 
-GridNode * Grid::GetNode(int index)
+GridNode* Grid::GetNode(int index)
 {
 	return m_ppGrid[index];
 }

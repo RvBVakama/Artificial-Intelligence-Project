@@ -2,7 +2,6 @@
 #include "Agent.h"
 #include "Renderer2D.h"
 #include <vector>
-#include "AStarNode.h"
 
 using namespace aie;
 
@@ -20,8 +19,6 @@ public:
 	void Draw(Renderer2D* pRenderer2D);
 
 private:
-	vector<AStarNode*> m_path;
-	
 	AIStateMachine*		m_pAIStateMachine;
 	stateMovement*		m_pstateMovement;
 	stateIdle*			m_pStateIdle;

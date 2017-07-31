@@ -2,6 +2,8 @@
 //#include "Input.h"
 #include "Entity.h"
 #include "Define.h"
+#include <math.h>
+#include "Agent.h"
 
 //using namespace aie;
 
@@ -14,34 +16,38 @@ behaviourWander::~behaviourWander()
 {
 }
 
-Vector2 behaviourWander::Calculate(Entity* pEntity, float fDeltaTime)
+Vector2 behaviourWander::Calculate(Agent* pAgent, float fDeltaTime)
 {
 	// Circle center calculation
-	Vector2* v2CircleCentre = new Vector2;
-	v2CircleCentre->Normalise();
-	*v2CircleCentre = *v2CircleCentre * CIRCLE_DISTANCE;
+	Vector2 v2CircleCentre = pAgent->GetVelocity();
+	v2CircleCentre.Normalise();
+	v2CircleCentre = v2CircleCentre * CIRCLE_DISTANCE;
 	
 	// Displacement force calculation
-	Vector2* v2Displacement = new Vector2(0, -1);
-	*v2Displacement = *v2Displacement * CIRCLE_RADIUS;
+	Vector2 v2Displacement(0, -1);
+	v2Displacement = v2Displacement * CIRCLE_RADIUS;
 
 	// Random vector direction angles
-	SetAngle(*v2Displacement, fWanderAngle, 1.0f);
+	v2Displacement = SetAngle(v2Displacement, fWanderAngle);
 
 	// Change wander angle every frame just a bit so it never 
 	// has the same value as the last frame
-	fWanderAngle += rand() % 51;
+	fWanderAngle += rand() % 5 - 2;
 
 	// Calculate and return the wander force
 	Vector2 v2WanderForce;
-	v2WanderForce = *v2CircleCentre + *v2Displacement;
+	v2WanderForce = v2CircleCentre + v2Displacement;
 
 	return v2WanderForce;
 }
 
-void behaviourWander::SetAngle(Vector2 v2, float value, float number)
+Vector2 behaviourWander::SetAngle(Vector2 v2, float value)
 {
+	Vector2 v2Res;
+
 	float fLength = v2.Magnitude();
-	v2.x = 
-	//https://gamedevelopment.tutsplus.com/tutorials/understanding-steering-behaviors-wander--gamedev-1624
+	v2Res.x = cosf(value) * fLength;
+	v2Res.y = sinf(value) * fLength;
+
+	return v2Res;
 }

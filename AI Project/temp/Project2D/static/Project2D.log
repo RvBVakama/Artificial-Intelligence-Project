@@ -1,2 +1,8 @@
-﻿  behaviourWander.cpp
-d:\git - rvbvakama\ai project\project2d\behaviourwander.cpp(47): error C2059: syntax error: '}'
+﻿  behaviourPatrol.cpp
+l:\git rvbvakama\ai project\project2d\behaviourpatrol.cpp(10): error C2512: 'Player_PathFind::Player_PathFind': no appropriate default constructor available
+l:\git rvbvakama\ai project\project2d\behaviourpatrol.cpp(46): error C2248: 'Player_PathFind::nStartNode': cannot access private member declared in class 'Player_PathFind'
+  l:\git rvbvakama\ai project\project2d\player_pathfind.h(27): note: see declaration of 'Player_PathFind::nStartNode'
+  l:\git rvbvakama\ai project\project2d\player_pathfind.h(12): note: see declaration of 'Player_PathFind'
+l:\git rvbvakama\ai project\project2d\behaviourpatrol.cpp(46): error C2248: 'Player_PathFind::nEndNode': cannot access private member declared in class 'Player_PathFind'
+  l:\git rvbvakama\ai project\project2d\player_pathfind.h(28): note: see declaration of 'Player_PathFind::nEndNode'
+  l:\git rvbvakama\ai project\project2d\player_pathfind.h(12): note: see declaration of 'Player_PathFind'

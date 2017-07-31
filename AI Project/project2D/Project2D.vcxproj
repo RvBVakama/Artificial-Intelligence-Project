@@ -180,6 +180,7 @@
     <ClCompile Include="DecisionPrint.cpp" />
     <ClCompile Include="DecisionTree.cpp" />
     <ClCompile Include="DecisionWander.cpp" />
+    <ClCompile Include="DecisionAgent.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FleeBehaviour.cpp" />
     <ClCompile Include="Grid.cpp" />
@@ -221,6 +222,7 @@
     <ClInclude Include="DecisionTree.h" />
     <ClInclude Include="DecisionWander.h" />
     <ClInclude Include="Define.h" />
+    <ClInclude Include="DecisionAgent.h" />
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FleeBehaviour.h" />

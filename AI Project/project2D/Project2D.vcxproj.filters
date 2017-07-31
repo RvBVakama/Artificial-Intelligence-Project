@@ -126,6 +126,9 @@
     <ClCompile Include="behaviourIdle.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
+    <ClCompile Include="DecisionAgent.cpp">
+      <Filter>Source Files\Decision</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseDecision.h">
@@ -274,6 +277,9 @@
     </ClInclude>
     <ClInclude Include="DecisionIdle.h">
       <Filter>Header Files\Decision</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionAgent.h">
+      <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

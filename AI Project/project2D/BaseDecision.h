@@ -1,9 +1,9 @@
 #pragma once
 
-class Entity;
+class Agent;
 
 class BaseDecision
 {
 public:
-	virtual void MakeDecision(Entity* pEntity, float fDeltaTime) = 0;
+	virtual void MakeDecision(Agent* pAgent, float fDeltaTime) = 0;
 };

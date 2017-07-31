@@ -17,4 +17,3 @@ public:
 	vector<BehaviourNode*> children;
 	BehaviourNode* pendingNode = nullptr;
 };
-

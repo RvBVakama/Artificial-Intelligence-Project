@@ -77,7 +77,7 @@ bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>
 				continue;
 
 			//if neighbour is already in open list and the path is finding
-			if (m_OpenList.Contains(pNeighbour))
+			if (m_OpenList.Contains(pNeighbour) != -1)
 			{
 				int heapIndex = m_OpenList.Contains(pNeighbour);
 				if (heapIndex != -1)
@@ -94,13 +94,12 @@ bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>
 					pNeighbour->m_pPrev = pCurrentNode;
 				
 					//Sort Heap
-					//m_OpenList.Resort(heapIndex);
+					m_OpenList.Resort(heapIndex);
 				}
 			}
 				//else (neighbour not in open list)
 			else
-			{
-				
+			{				
 				//Calculate G Score.
 				pNeighbour->m_nGScore = pCurrentNode->m_nGScore + nCost;
 

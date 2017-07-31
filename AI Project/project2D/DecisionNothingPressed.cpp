@@ -11,7 +11,7 @@ DecisionNothingPressed::~DecisionNothingPressed()
 {
 }
 
-void DecisionNothingPressed::MakeDecision(Entity* pEntity, float fDeltaTime)
+void DecisionNothingPressed::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	//system("cls");
 	//cout << "cat" << endl;

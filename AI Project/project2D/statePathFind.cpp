@@ -19,8 +19,8 @@ void statePathFind::OnEnter()
 
 void statePathFind::OnUpdate(Agent* pAgent, float fDeltaTime)
 {
-	m_behaviourPatrol->Calculate(pAgent, fDeltaTime);
-	pAgent->SetPosition(pAgent->GetPosition());
+	Vector2 v2Force = m_behaviourPatrol->Calculate(pAgent, fDeltaTime);
+	pAgent->SetPosition(pAgent->GetPosition() + v2Force);
 }
 
 void statePathFind::OnDraw(Renderer2D * renderer2d)

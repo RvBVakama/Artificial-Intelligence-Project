@@ -9,10 +9,10 @@ public:
 	behaviourWander(float fWeighting);
 	~behaviourWander();
 
-	Vector2 Calculate(Entity* pEntity, float fDeltaTime);
+	Vector2 Calculate(Agent* pAgent, float fDeltaTime);
 
 private:
-	void SetAngle(Vector2 v2, float value, float number);
+	Vector2 SetAngle(Vector2 v2, float value);
 
 	float fWanderAngle;
 };

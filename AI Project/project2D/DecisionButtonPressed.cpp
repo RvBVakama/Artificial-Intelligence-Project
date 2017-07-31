@@ -11,16 +11,16 @@ DecisionButtonPressed::~DecisionButtonPressed()
 {
 }
 
-void DecisionButtonPressed::MakeDecision(Entity* pEntity, float fDeltaTime)
+void DecisionButtonPressed::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_SPACE))
 	{
-		m_pWanderDecision->MakeDecision(pEntity, fDeltaTime);
+		m_pIdleDecision->MakeDecision(pAgent, fDeltaTime);
 		//m_pTrueDecision->MakeDecision(pEntity, fDeltaTime);
 	}
 	else
 	{
-		m_pIdleDecision->MakeDecision(pEntity, fDeltaTime);
+		m_pWanderDecision->MakeDecision(pAgent, fDeltaTime);
 		//m_pFalseDecision->MakeDecision(pEntity, fDeltaTime);
 	}
 }

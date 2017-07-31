@@ -9,8 +9,7 @@ class StateMachine;
 class Agent;
 class Player_Mouse;
 class Player_PathFind;
-//Decision Implementation
-class DecisionTree;
+class DecisionAgent;
 
 class Application2D : public aie::Application {
 public:
@@ -31,8 +30,7 @@ private:
 	StateMachine*		m_pStateMachine;
 	Player_Mouse*		m_pPlayer_Mouse;
 	Player_PathFind*	m_pPlayer_PathFind;
-	//Decision Implementation
-	DecisionTree*		m_pDecisionTree;
+	DecisionAgent*		m_pDecisionAgent;
 	
 	float m_cameraX, m_cameraY;
 };

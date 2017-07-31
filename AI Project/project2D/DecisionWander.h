@@ -9,7 +9,7 @@ public:
 	DecisionWander();
 	virtual ~DecisionWander();
 
-	void MakeDecision(Entity* pEntity, float fDeltaTime);
+	void MakeDecision(Agent* pAgent, float fDeltaTime);
 
 private:
 	behaviourWander* m_pBehaviourWander;

@@ -12,7 +12,7 @@ DecisionPrint::~DecisionPrint()
 {
 }
 
-void DecisionPrint::MakeDecision(Entity* pEntity, float fDeltaTime)
+void DecisionPrint::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	//m_fTimer += fDeltaTime;
 	//system("cls");

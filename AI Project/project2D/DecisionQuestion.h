@@ -4,7 +4,7 @@
 class DecisionQuestion : public BaseDecision
 {
 public:
-	virtual void MakeDecision(Entity* pEntity, float fDeltaTime) = 0;
+	virtual void MakeDecision(Agent* pAgent, float fDeltaTime) = 0;
 
 	BaseDecision* m_pWanderDecision;
 	//BaseDecision* m_pTrueDecision;

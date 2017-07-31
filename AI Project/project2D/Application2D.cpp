@@ -8,11 +8,10 @@
 #include "Define.h"
 #include "GridNode.h"
 #include "AStarNode.h"
-//Decision Implementation
-#include "DecisionTree.h"
 #include "Agent.h"
 #include "Player_Mouse.h"
 #include "Player_PathFind.h"
+#include "DecisionAgent.h"
 #include "stateMovement.h"
 #include "Grid.h"
 #include <vector>
@@ -51,18 +50,17 @@ bool Application2D::startup()
 
 	ResourceManager<Texture>::Create();
 
-	//Decision Implementation
-	m_pDecisionTree = new DecisionTree;
-	_ASSERT(m_pDecisionTree);
-
 	m_pStateMachine = new StateMachine();
 	_ASSERT(m_pStateMachine);
 
-	m_pPlayer_Mouse = new Player_Mouse;
+	m_pPlayer_Mouse = new Player_Mouse();
 	_ASSERT(m_pPlayer_Mouse);
 
-	m_pPlayer_PathFind = new Player_PathFind;
+	m_pPlayer_PathFind = new Player_PathFind(871, 899);
 	_ASSERT(m_pPlayer_PathFind);
+
+	m_pDecisionAgent = new DecisionAgent();
+	_ASSERT(m_pDecisionAgent);
 
 	//m_pGrid = new Grid;
 	Grid::create();
@@ -78,10 +76,9 @@ bool Application2D::startup()
 // ---------------------------------------------------------------------------------
 void Application2D::shutdown() {
 
+	delete m_pDecisionAgent;
 	delete m_pPlayer_PathFind;
 	delete m_pPlayer_Mouse;
-	//Decision Implementation
-	delete m_pDecisionTree;
 	Grid::destroy();
 	ResourceManager<Texture>::Destroy();
 	CollisionManager::Destroy();
@@ -108,10 +105,7 @@ void Application2D::update(float deltaTime) {
 	// Updating the players
 	m_pPlayer_Mouse->Update(deltaTime);
 	m_pPlayer_PathFind->Update(deltaTime);
-
-	//Decision Implementation
-	m_pDecisionTree->Update(nullptr, deltaTime);
-
+	m_pDecisionAgent->Update(deltaTime);
 }
 
 // ---------------------------------------------------------------------------------
@@ -137,6 +131,7 @@ void Application2D::draw() {
 	// Drawing the players
 	m_pPlayer_Mouse->Draw(m_2dRenderer);
 	m_pPlayer_PathFind->Draw(m_2dRenderer);
-	
+	m_pDecisionAgent->Draw(m_2dRenderer);
+
 	m_2dRenderer->end();
 }

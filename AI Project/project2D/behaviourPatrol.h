@@ -6,6 +6,8 @@
 
 using namespace aie;
 
+class Player_PathFind;
+
 class behaviourPatrol : public IBehaviour
 {
 public:
@@ -18,6 +20,7 @@ public:
 private:
 	AStar*				m_pAStar;
 	vector<AStarNode*>	m_path;
+	Player_PathFind*	m_pPlayer_PathFind;
 
 	unsigned int m_nNextNode;
 };

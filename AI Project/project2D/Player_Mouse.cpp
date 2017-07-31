@@ -8,8 +8,8 @@
 
 Player_Mouse::Player_Mouse()
 {
-//	m_v2Pos.x = 200.0f;
-//	m_v2Pos.y = 200.0f;
+	m_v2Pos.x = 400.0f;
+	m_v2Pos.y = 400.0f;
 
 	m_pAIStateMachine = new AIStateMachine();
 	_ASSERT(m_pAIStateMachine);
