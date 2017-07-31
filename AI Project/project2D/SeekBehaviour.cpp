@@ -17,7 +17,7 @@ Vector2 SeekBehaviour::Calculate(Agent * pAgent, float fDeltaTime)
 	int nMouseX;
 	int nMouseY;
 	Input::getInstance()->getMouseXY(&nMouseX, &nMouseY);
-	Vector2 v2_mousePos(nMouseX, nMouseY);
+	Vector2 v2_mousePos((float)nMouseX, (float)nMouseY);
 
 	Vector2 v2Dir = v2_mousePos - pAgent->GetPosition();
 	v2Dir.Normalise();

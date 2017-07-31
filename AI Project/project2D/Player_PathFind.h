@@ -17,7 +17,7 @@ public:
 
 	void Update(float deltaTime);
 	void Draw(Renderer2D* pRenderer2D);
-
+	
 private:
 	vector<AStarNode*> m_path;
 

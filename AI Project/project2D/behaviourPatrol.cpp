@@ -6,9 +6,6 @@
 
 int DiagonalHeurisitic(AStarNode* pNode, AStarNode* pEnd)
 {
-
-	Player_PathFind* m_pPlayer_PathFind = new Player_PathFind();
-
 	//Diagonal Shortcut Method
 	int difX = ((GridNode*)pNode)->m_nIndexX - ((GridNode*)pEnd)->m_nIndexX;
 	int difY = ((GridNode*)pNode)->m_nIndexY - ((GridNode*)pEnd)->m_nIndexY;
@@ -43,7 +40,7 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 
 	Grid* pGrid = Grid::getInstance();
 
-	m_pAStar->CalculatePath(pGrid->GetNode(m_pPlayer_PathFind->nStartNode), pGrid->GetNode(m_pPlayer_PathFind->nEndNode), &m_path);
+	m_pAStar->CalculatePath(pGrid->GetNode(nStartNode), pGrid->GetNode(nEndNode), &m_path);
 	
 	Vector2 dest = ((GridNode*)m_path[m_nNextNode])->m_v2Pos;
 	Vector2 dist = dest - pAgent->GetPosition();
