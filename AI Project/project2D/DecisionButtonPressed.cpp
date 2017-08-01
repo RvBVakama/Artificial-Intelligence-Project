@@ -5,6 +5,7 @@ using namespace aie;
 
 DecisionButtonPressed::DecisionButtonPressed()
 {
+	toggle = true;
 }
 
 DecisionButtonPressed::~DecisionButtonPressed()
@@ -13,15 +14,23 @@ DecisionButtonPressed::~DecisionButtonPressed()
 
 void DecisionButtonPressed::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
-	if (Input::getInstance()->isKeyDown(INPUT_KEY_SPACE))
+	if (Input::getInstance()->wasKeyPressed(INPUT_KEY_SPACE))
 	{
-		m_pWanderDecision->MakeDecision(pAgent, fDeltaTime);
-		//m_pTrueDecision->MakeDecision(pEntity, fDeltaTime);
+		if (!toggle)
+			toggle = true;
+
+		else if (toggle)
+			toggle = false;
 	}
 
-	else
+	if (!toggle)
 	{
-		m_pIdleDecision->MakeDecision(pAgent, fDeltaTime);
-		//m_pFalseDecision->MakeDecision(pEntity, fDeltaTime);
+		m_pWanderDecision->MakeDecision(pAgent, fDeltaTime);
 	}
+
+	if (toggle)
+	{
+		m_SeekDecision->MakeDecision(pAgent, fDeltaTime);
+		m_ArriveDecision->MakeDecision(pAgent, fDeltaTime);
+	}	
 }

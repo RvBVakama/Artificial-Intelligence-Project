@@ -8,6 +8,7 @@ public:
 
 	BaseDecision* m_pWanderDecision;
 	//BaseDecision* m_pTrueDecision;
-	BaseDecision* m_pIdleDecision;
+	BaseDecision* m_ArriveDecision;
 	//BaseDecision* m_pFalseDecision;
+	BaseDecision* m_SeekDecision;
 };

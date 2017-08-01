@@ -175,14 +175,16 @@
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="CompositeNode.cpp" />
     <ClCompile Include="DecisionButtonPressed.cpp" />
-    <ClCompile Include="DecisionIdle.cpp" />
+    <ClCompile Include="DecisionArrive.cpp" />
     <ClCompile Include="DecisionNothingPressed.cpp" />
     <ClCompile Include="DecisionPrint.cpp" />
+    <ClCompile Include="DecisionSeek.cpp" />
     <ClCompile Include="DecisionTree.cpp" />
     <ClCompile Include="DecisionWander.cpp" />
     <ClCompile Include="DecisionAgent.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FleeBehaviour.cpp" />
+    <ClCompile Include="grandchildNoot.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
@@ -190,6 +192,7 @@
     <ClCompile Include="Player_PathFind.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
     <ClCompile Include="Player_Mouse.cpp" />
+    <ClCompile Include="SeekBehaviourForBehaviourTree.cpp" />
     <ClCompile Include="stateIdle.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="stateMovement.cpp" />
@@ -216,10 +219,11 @@
     <ClInclude Include="Composite.h" />
     <ClInclude Include="CompositeNode.h" />
     <ClInclude Include="DecisionButtonPressed.h" />
-    <ClInclude Include="DecisionIdle.h" />
+    <ClInclude Include="DecisionArrive.h" />
     <ClInclude Include="DecisionNothingPressed.h" />
     <ClInclude Include="DecisionPrint.h" />
     <ClInclude Include="DecisionQuestion.h" />
+    <ClInclude Include="DecisionSeek.h" />
     <ClInclude Include="DecisionTree.h" />
     <ClInclude Include="DecisionWander.h" />
     <ClInclude Include="Define.h" />
@@ -227,6 +231,7 @@
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FleeBehaviour.h" />
+    <ClInclude Include="grandchildNoot.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="GridNode.h" />
     <ClInclude Include="Heap.h" />
@@ -239,6 +244,7 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SeekBehaviour.h" />
+    <ClInclude Include="SeekBehaviourForBehaviourTree.h" />
     <ClInclude Include="Selector.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Stack.h" />

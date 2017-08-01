@@ -10,5 +10,4 @@ public:
 	~SeekBehaviour();
 
 	Vector2 Calculate(Agent* pAgent, float fDeltaTime);
-
 };

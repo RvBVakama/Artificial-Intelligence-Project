@@ -9,9 +9,12 @@
 #include "GridNode.h"
 #include "AStarNode.h"
 #include "Agent.h"
+// Players
 #include "Player_Mouse.h"
 #include "Player_PathFind.h"
 #include "DecisionAgent.h"
+#include "grandchildNoot.h"
+// Other
 #include "stateMovement.h"
 #include "Grid.h"
 #include <vector>
@@ -53,6 +56,7 @@ bool Application2D::startup()
 	m_pStateMachine = new StateMachine();
 	_ASSERT(m_pStateMachine);
 
+	// Players
 	m_pPlayer_Mouse = new Player_Mouse();
 	_ASSERT(m_pPlayer_Mouse);
 
@@ -64,6 +68,9 @@ bool Application2D::startup()
 
 	m_pDecisionAgent = new DecisionAgent();
 	_ASSERT(m_pDecisionAgent);
+
+	m_pLilNooter = new grandchildNoot();
+	_ASSERT(m_pLilNooter);
 
 	//m_pGrid = new Grid;
 	Grid::create();
@@ -79,10 +86,13 @@ bool Application2D::startup()
 // ---------------------------------------------------------------------------------
 void Application2D::shutdown() {
 
+	// Players
+	delete m_pLilNooter;
 	delete m_pDecisionAgent;
 	delete m_pPlayer_PathFindA;
 	delete m_pPlayer_PathFindB;
 	delete m_pPlayer_Mouse;
+	// Other
 	Grid::destroy();
 	ResourceManager<Texture>::Destroy();
 	CollisionManager::Destroy();
@@ -138,6 +148,7 @@ void Application2D::draw() {
 	m_pPlayer_PathFindA->Draw(m_2dRenderer);
 	m_pPlayer_PathFindB->Draw(m_2dRenderer);
 	m_pDecisionAgent->Draw(m_2dRenderer);
+	m_pLilNooter->Draw(m_2dRenderer);
 
 	m_2dRenderer->end();
 }

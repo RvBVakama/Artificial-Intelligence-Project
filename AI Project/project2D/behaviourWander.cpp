@@ -45,6 +45,8 @@ Vector2 behaviourWander::SetAngle(Vector2 v2, float value)
 {
 	Vector2 v2Res;
 
+	// HELP // matt I think has a different function for getting the
+	// vector.length which included more than just magnitude
 	float fLength = v2.Magnitude();
 	v2Res.x = cosf(value) * fLength;
 	v2Res.y = sinf(value) * fLength;
