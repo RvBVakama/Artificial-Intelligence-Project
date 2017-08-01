@@ -31,6 +31,12 @@
     <Filter Include="Header Files\Behaviours">
       <UniqueIdentifier>{a967e462-a92d-4c46-a3fa-2eabb169080a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\BehaviourTree">
+      <UniqueIdentifier>{dccf88bc-86aa-4461-9539-f9e7f7678feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\BehvaiourTree">
+      <UniqueIdentifier>{115e1b86-f255-4169-a1cf-6f8b0cf1a957}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DecisionButtonPressed.cpp">
@@ -49,9 +55,6 @@
       <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
     <ClCompile Include="AIBaseState.cpp">
-      <Filter>Source Files\UnSorted</Filter>
-    </ClCompile>
-    <ClCompile Include="AIBehaviourTree.cpp">
       <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
     <ClCompile Include="AIStateMachine.cpp">
@@ -79,9 +82,6 @@
       <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
-      <Filter>Source Files\UnSorted</Filter>
-    </ClCompile>
-    <ClCompile Include="IBehaviour.cpp">
       <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
@@ -129,6 +129,12 @@
     <ClCompile Include="DecisionAgent.cpp">
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
+    <ClCompile Include="AIBehaviourTree.cpp">
+      <Filter>Source Files\BehvaiourTree</Filter>
+    </ClCompile>
+    <ClCompile Include="IBehaviour.cpp">
+      <Filter>Source Files\BehvaiourTree</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseDecision.h">
@@ -155,9 +161,6 @@
     <ClInclude Include="AIBaseState.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
-    <ClInclude Include="AIBehaviourTree.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
     <ClInclude Include="AIStateMachine.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
@@ -173,22 +176,10 @@
     <ClInclude Include="BaseState.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
-    <ClInclude Include="BehaviourAction.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
-    <ClInclude Include="BehaviourNode.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
-    <ClInclude Include="BehaviourQuestion.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
     <ClInclude Include="Collider.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
     <ClInclude Include="CollisionManager.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
-    <ClInclude Include="Composite.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
     <ClInclude Include="CompositeNode.h">
@@ -212,9 +203,6 @@
     <ClInclude Include="Heap.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
-    <ClInclude Include="IBehaviour.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
     <ClInclude Include="LinkedList.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
@@ -234,12 +222,6 @@
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
-    <ClInclude Include="Selector.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
-    <ClInclude Include="Sequence.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h">
@@ -279,6 +261,30 @@
       <Filter>Header Files\Decision</Filter>
     </ClInclude>
     <ClInclude Include="DecisionAgent.h">
+      <Filter>Header Files\UnSorted</Filter>
+    </ClInclude>
+    <ClInclude Include="AIBehaviourTree.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviourAction.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviourNode.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="BehaviourQuestion.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Composite.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Selector.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="Sequence.h">
+      <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="IBehaviour.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
   </ItemGroup>

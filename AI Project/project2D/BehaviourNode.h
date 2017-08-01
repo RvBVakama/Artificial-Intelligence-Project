@@ -12,4 +12,3 @@ class BehaviourNode
 public:
 	virtual EBehaviourResult Execute() = 0;
 };
-

@@ -12,7 +12,7 @@ class statePathFind;
 class Player_PathFind : public Agent
 {
 public:
-	Player_PathFind(int nStartNode, int nEndNode);
+	Player_PathFind(int StartNode, int EndNode);
 	~Player_PathFind();
 
 	void Update(float deltaTime);
@@ -23,7 +23,4 @@ private:
 
 	AIStateMachine*		m_pAIStateMachine;
 	statePathFind*		m_pstatePathFind;
-
-	int nStartNode;
-	int nEndNode;
 };

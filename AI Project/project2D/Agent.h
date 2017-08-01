@@ -25,6 +25,9 @@ public:
 	Vector2 GetVelocity() { return m_v2Velocity; }
 	void SetVelocity(Vector2 v2Vel) { m_v2Velocity = v2Vel; }
 
+	int nStartNode;
+	int nEndNode;
+
 protected:
 	std::vector<IBehaviour *> m_behaviours;
 
@@ -37,6 +40,8 @@ protected:
 	Vector2 m_acceleration;
 	
 	Renderer2D* m_pRenderer;
+
+private:
 
 	//texture maybs?
 };
