@@ -63,13 +63,13 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 
 void behaviourPatrol::OnDraw(Renderer2D* pRenderer2D)
 {
-	//Draw Path
+	// Draw Path
 	for (size_t i = 0; i < m_path.size(); ++i)
 	{
 		GridNode* pNode = (GridNode*)m_path[i];
 
 		pRenderer2D->setRenderColour(0x207068FF);
-		pRenderer2D->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 0.9f, NODE_SIZE / 0.9f);
+		pRenderer2D->drawBox(pNode->m_v2Pos.x, pNode->m_v2Pos.y, NODE_SIZE / 0.9f, NODE_SIZE / 0.9f, 0, 99);
 		pRenderer2D->setRenderColour(0xFFFFFFFF);
 	}
 }

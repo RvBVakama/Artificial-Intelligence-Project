@@ -9,6 +9,7 @@ Player_PathFind::Player_PathFind(int StartNode, int EndNode)
 {
 	nStartNode = StartNode;
 	nEndNode = EndNode;
+
 	m_pAIStateMachine = new AIStateMachine();
 	_ASSERT(m_pAIStateMachine);
 

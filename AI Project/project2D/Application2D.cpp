@@ -56,8 +56,11 @@ bool Application2D::startup()
 	m_pPlayer_Mouse = new Player_Mouse();
 	_ASSERT(m_pPlayer_Mouse);
 
-	m_pPlayer_PathFind = new Player_PathFind(871, 899);
-	_ASSERT(m_pPlayer_PathFind);
+	m_pPlayer_PathFindA = new Player_PathFind(871, 899);
+	_ASSERT(m_pPlayer_PathFindA);
+
+	m_pPlayer_PathFindB = new Player_PathFind(7, 352);
+	_ASSERT(m_pPlayer_PathFindB);
 
 	m_pDecisionAgent = new DecisionAgent();
 	_ASSERT(m_pDecisionAgent);
@@ -77,7 +80,8 @@ bool Application2D::startup()
 void Application2D::shutdown() {
 
 	delete m_pDecisionAgent;
-	delete m_pPlayer_PathFind;
+	delete m_pPlayer_PathFindA;
+	delete m_pPlayer_PathFindB;
 	delete m_pPlayer_Mouse;
 	Grid::destroy();
 	ResourceManager<Texture>::Destroy();
@@ -104,7 +108,8 @@ void Application2D::update(float deltaTime) {
 
 	// Updating the players
 	m_pPlayer_Mouse->Update(deltaTime);
-	m_pPlayer_PathFind->Update(deltaTime);
+	m_pPlayer_PathFindA->Update(deltaTime);
+	m_pPlayer_PathFindB->Update(deltaTime);
 	m_pDecisionAgent->Update(deltaTime);
 }
 
@@ -130,7 +135,8 @@ void Application2D::draw() {
 
 	// Drawing the players
 	m_pPlayer_Mouse->Draw(m_2dRenderer);
-	m_pPlayer_PathFind->Draw(m_2dRenderer);
+	m_pPlayer_PathFindA->Draw(m_2dRenderer);
+	m_pPlayer_PathFindB->Draw(m_2dRenderer);
 	m_pDecisionAgent->Draw(m_2dRenderer);
 
 	m_2dRenderer->end();

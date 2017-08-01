@@ -9,7 +9,7 @@
 
 behaviourWander::behaviourWander(float fWeighting) : IBehaviour(fWeighting)
 {
-	fWanderAngle = 25.0f;
+	fWanderAngle = 50.0f * 4;
 }
 
 behaviourWander::~behaviourWander()
@@ -32,7 +32,7 @@ Vector2 behaviourWander::Calculate(Agent* pAgent, float fDeltaTime)
 
 	// Change wander angle every frame just a bit so it never 
 	// has the same value as the last frame
-	fWanderAngle += rand() % 5 - 2;
+	fWanderAngle += rand() % 10 * 4 - 4 * 4;
 
 	// Calculate and return the wander force
 	Vector2 v2WanderForce;

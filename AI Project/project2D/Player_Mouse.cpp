@@ -5,6 +5,7 @@
 #include "Define.h"
 #include "Renderer2D.h"
 #include "GridNode.h"
+#include "Input.h"
 
 Player_Mouse::Player_Mouse()
 {
@@ -36,6 +37,16 @@ Player_Mouse::~Player_Mouse()
 
 void Player_Mouse::Update(float deltaTime)
 {
+	if (Input::getInstance()->isKeyDown(INPUT_KEY_S))
+	{
+		m_pAIStateMachine->PushState(E_STATEIDLE);
+	}
+
+	else
+	{
+		m_pAIStateMachine->PushState(E_STATEMOVEMENT);
+	}
+
 	m_pAIStateMachine->Update(this, deltaTime);
 }
 
@@ -45,6 +56,6 @@ void Player_Mouse::Draw(Renderer2D* pRenderer2D)
 
 	//Draw Player
 	pRenderer2D->setRenderColour(0xFF0080FF);
-	pRenderer2D->drawBox(m_v2Pos.x, m_v2Pos.y, 20, 20);
+	pRenderer2D->drawBox(m_v2Pos.x, m_v2Pos.y, 20, 20 ,0, 0);
 	pRenderer2D->setRenderColour(0xFFFFFFFF);
 }

@@ -29,7 +29,8 @@ private:
 	aie::Audio*			m_audio;
 	StateMachine*		m_pStateMachine;
 	Player_Mouse*		m_pPlayer_Mouse;
-	Player_PathFind*	m_pPlayer_PathFind;
+	Player_PathFind*	m_pPlayer_PathFindA;
+	Player_PathFind*	m_pPlayer_PathFindB;
 	DecisionAgent*		m_pDecisionAgent;
 	
 	float m_cameraX, m_cameraY;

@@ -27,7 +27,11 @@ void DecisionAgent::Update(float deltaTime)
 void DecisionAgent::Draw(Renderer2D * pRenderer2D)
 {
 	//Draw Player
-	pRenderer2D->setRenderColour(0x207068FF);
+	pRenderer2D->setRenderColour(0x5F115FFF);
 	pRenderer2D->drawBox(m_v2Pos.x, m_v2Pos.y, 20, 20);
+	pRenderer2D->setRenderColour(0xFFFFFFFF);
+	pRenderer2D->setRenderColour(0x000000FF);
+	pRenderer2D->drawBox(m_v2Pos.x - 10, m_v2Pos.y, 5, 5, 0, 1);
+	pRenderer2D->drawBox(m_v2Pos.x + 10, m_v2Pos.y, 5, 5, 0, 1);
 	pRenderer2D->setRenderColour(0xFFFFFFFF);
 }

@@ -10,7 +10,7 @@ public:
 		m_szText = text;
 	}
 
-	EBehaviourResult Execute()
+	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime)
 	{
 		std::cout << "Action Success" << std::endl;
 		return EBEHAVIOUR_SUCCESS;

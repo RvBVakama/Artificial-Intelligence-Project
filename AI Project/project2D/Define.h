@@ -23,8 +23,8 @@
 //------------------------------------------------
 // Wander Behaviour
 //------------------------------------------------
-#define CIRCLE_DISTANCE 120.0f
-#define CIRCLE_RADIUS 80.0f
+#define CIRCLE_DISTANCE 240.0f * 4
+#define CIRCLE_RADIUS 160.0f * 4
 
 //------------------------------------------------
 // List of some state/s that are used in the app

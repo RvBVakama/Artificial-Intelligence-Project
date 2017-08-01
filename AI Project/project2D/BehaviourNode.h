@@ -1,5 +1,7 @@
 #pragma once
 
+class Agent;
+
 enum EBehaviourResult
 {
 	EBEHAVIOUR_FAILURE,
@@ -10,5 +12,5 @@ enum EBehaviourResult
 class BehaviourNode
 {
 public:
-	virtual EBehaviourResult Execute() = 0;
+	virtual EBehaviourResult Execute(Agent* pAgent, float fDeltaTime) = 0;
 };

@@ -163,13 +163,13 @@
   <ItemGroup>
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="AIBaseState.cpp" />
-    <ClCompile Include="AIBehaviourTree.cpp" />
     <ClCompile Include="AIStateMachine.cpp" />
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="behaviourIdle.cpp" />
     <ClCompile Include="behaviourPatrol.cpp" />
+    <ClCompile Include="behaviourPursue.cpp" />
     <ClCompile Include="behaviourWander.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
@@ -186,6 +186,7 @@
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Player_Behaviour.cpp" />
     <ClCompile Include="Player_PathFind.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
     <ClCompile Include="Player_Mouse.cpp" />
@@ -197,7 +198,6 @@
   <ItemGroup>
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AIBaseState.h" />
-    <ClInclude Include="AIBehaviourTree.h" />
     <ClInclude Include="AIStateMachine.h" />
     <ClInclude Include="Application2D.h" />
     <ClInclude Include="AStar.h" />
@@ -207,6 +207,7 @@
     <ClInclude Include="BehaviourAction.h" />
     <ClInclude Include="behaviourIdle.h" />
     <ClInclude Include="behaviourPatrol.h" />
+    <ClInclude Include="behaviourPursue.h" />
     <ClInclude Include="BehaviourQuestion.h" />
     <ClInclude Include="BehaviourNode.h" />
     <ClInclude Include="behaviourWander.h" />
@@ -232,6 +233,7 @@
     <ClInclude Include="IBehaviour.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListNode.h" />
+    <ClInclude Include="Player_Behaviour.h" />
     <ClInclude Include="Player_PathFind.h" />
     <ClInclude Include="Question.h" />
     <ClInclude Include="Resource.h" />

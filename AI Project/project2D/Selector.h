@@ -4,7 +4,7 @@
 class Selector : public Composite
 {
 public:
-	EBehaviourResult Execute()
+	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime)
 	{
 		BehaviourNode* child = pendingNode;
 		unsigned int i = -1;
@@ -17,7 +17,7 @@ public:
 			if (i >= 0)
 			child = children[i];
 		
-			EBehaviourResult result = child->Execute();
+			EBehaviourResult result = child->Execute(pAgent, fDeltaTime);
 			if (result == EBEHAVIOUR_SUCCESS)
 				return EBEHAVIOUR_SUCCESS;
 
@@ -27,7 +27,7 @@ public:
 
 		for (unsigned int i = 0; i < children.size(); ++i)
 		{
-			if (children[i]->Execute() == EBEHAVIOUR_SUCCESS)
+			if (children[i]->Execute(pAgent, fDeltaTime) == EBEHAVIOUR_SUCCESS)
 			{
 				return EBEHAVIOUR_SUCCESS;
 			}

@@ -7,9 +7,9 @@ using namespace aie;
 class BehaviourQuestion : public BehaviourNode
 {
 public:
-	EBehaviourResult Execute()
+	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime)
 	{
-		if (Input::getInstance()->wasKeyPressed(INPUT_KEY_Q))
+		if (Input::getInstance()->wasKeyPressed(INPUT_KEY_W))
 			return EBEHAVIOUR_SUCCESS;
 		else
 			return EBEHAVIOUR_FAILURE;

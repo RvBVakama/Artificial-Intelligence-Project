@@ -21,7 +21,7 @@ Grid::Grid()
 			// Create the node.
 			m_ppGrid[index] = new GridNode(pos, index, x, y);
 
-			if (x % 3 == 0 && y != 15)
+			if (x % 3 == 0 && y != 18 && y != 9)
 			{
 				m_ppGrid[index]->m_bBlocked = true;
 			}
@@ -135,7 +135,7 @@ void Grid::Draw(Renderer2D* m_2dRenderer)
 
 		float x = m_ppGrid[i]->m_v2Pos.x;
 		float y = m_ppGrid[i]->m_v2Pos.y;
-		m_2dRenderer->drawBox(x, y, NODE_SIZE - GRID_SPACING, NODE_SIZE - GRID_SPACING);
+		m_2dRenderer->drawBox(x, y, NODE_SIZE - GRID_SPACING, NODE_SIZE - GRID_SPACING, 0, 100);
 
 		//for (size_t a = 0; a < m_ppGrid[i]->m_AdjacentList.size(); ++a)
 		//{

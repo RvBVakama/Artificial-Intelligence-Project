@@ -17,7 +17,6 @@ public:
 	int PushState(int nStateIndex);
 	void RegisterState(int nStateIndex, AIBaseState* pState);
 	void PopState();
-	bool bDrawLowerState;
 
 private:
 	DynamicArray<AIBaseState*> m_StateList;

@@ -129,11 +129,14 @@
     <ClCompile Include="DecisionAgent.cpp">
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
-    <ClCompile Include="AIBehaviourTree.cpp">
-      <Filter>Source Files\BehvaiourTree</Filter>
-    </ClCompile>
     <ClCompile Include="IBehaviour.cpp">
-      <Filter>Source Files\BehvaiourTree</Filter>
+      <Filter>Source Files\UnSorted</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Behaviour.cpp">
+      <Filter>Source Files\UnSorted</Filter>
+    </ClCompile>
+    <ClCompile Include="behaviourPursue.cpp">
+      <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -263,9 +266,6 @@
     <ClInclude Include="DecisionAgent.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
-    <ClInclude Include="AIBehaviourTree.h">
-      <Filter>Header Files\BehaviourTree</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviourAction.h">
       <Filter>Header Files\BehaviourTree</Filter>
     </ClInclude>
@@ -286,6 +286,12 @@
     </ClInclude>
     <ClInclude Include="IBehaviour.h">
       <Filter>Header Files\UnSorted</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Behaviour.h">
+      <Filter>Header Files\UnSorted</Filter>
+    </ClInclude>
+    <ClInclude Include="behaviourPursue.h">
+      <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
