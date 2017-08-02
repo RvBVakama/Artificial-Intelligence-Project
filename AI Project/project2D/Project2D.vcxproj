@@ -167,7 +167,9 @@
     <ClCompile Include="Application2D.cpp" />
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="BaseState.cpp" />
+    <ClCompile Include="behaviourArrive.cpp" />
     <ClCompile Include="behaviourIdle.cpp" />
+    <ClCompile Include="behaviourKeyboard.cpp" />
     <ClCompile Include="behaviourPatrol.cpp" />
     <ClCompile Include="behaviourPursue.cpp" />
     <ClCompile Include="behaviourWander.cpp" />
@@ -184,15 +186,14 @@
     <ClCompile Include="DecisionAgent.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FleeBehaviour.cpp" />
-    <ClCompile Include="grandchildNoot.cpp" />
     <ClCompile Include="Grid.cpp" />
     <ClCompile Include="IBehaviour.cpp" />
+    <ClCompile Include="LilNooter.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Player_Behaviour.cpp" />
     <ClCompile Include="Player_PathFind.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
     <ClCompile Include="Player_Mouse.cpp" />
-    <ClCompile Include="SeekBehaviourForBehaviourTree.cpp" />
     <ClCompile Include="stateIdle.cpp" />
     <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="stateMovement.cpp" />
@@ -208,7 +209,9 @@
     <ClInclude Include="BaseDecision.h" />
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="BehaviourAction.h" />
+    <ClInclude Include="behaviourArrive.h" />
     <ClInclude Include="behaviourIdle.h" />
+    <ClInclude Include="behaviourKeyboard.h" />
     <ClInclude Include="behaviourPatrol.h" />
     <ClInclude Include="behaviourPursue.h" />
     <ClInclude Include="BehaviourQuestion.h" />
@@ -231,11 +234,11 @@
     <ClInclude Include="DynamicArray.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FleeBehaviour.h" />
-    <ClInclude Include="grandchildNoot.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="GridNode.h" />
     <ClInclude Include="Heap.h" />
     <ClInclude Include="IBehaviour.h" />
+    <ClInclude Include="LilNooter.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="Player_Behaviour.h" />
@@ -244,7 +247,6 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SeekBehaviour.h" />
-    <ClInclude Include="SeekBehaviourForBehaviourTree.h" />
     <ClInclude Include="Selector.h" />
     <ClInclude Include="Sequence.h" />
     <ClInclude Include="Stack.h" />

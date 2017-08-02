@@ -1,8 +1,6 @@
 #pragma once
 #include "IBehaviour.h"
 
-class Entity;
-
 class behaviourWander : public IBehaviour
 {
 public:

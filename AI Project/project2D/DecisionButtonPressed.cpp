@@ -15,22 +15,11 @@ DecisionButtonPressed::~DecisionButtonPressed()
 void DecisionButtonPressed::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	if (Input::getInstance()->wasKeyPressed(INPUT_KEY_SPACE))
-	{
-		if (!toggle)
-			toggle = true;
-
-		else if (toggle)
-			toggle = false;
-	}
+		toggle = !toggle;
 
 	if (!toggle)
-	{
 		m_pWanderDecision->MakeDecision(pAgent, fDeltaTime);
-	}
 
 	if (toggle)
-	{
-		m_SeekDecision->MakeDecision(pAgent, fDeltaTime);
 		m_ArriveDecision->MakeDecision(pAgent, fDeltaTime);
-	}	
 }

@@ -11,7 +11,8 @@ class Agent;
 class Player_Mouse;
 class Player_PathFind;
 class DecisionAgent;
-class grandchildNoot;
+class LilNooter;
+class BehaviourNode;
 
 class Application2D : public aie::Application {
 public:
@@ -30,12 +31,13 @@ private:
 	aie::Font*			m_font;
 	aie::Audio*			m_audio;
 	StateMachine*		m_pStateMachine;
+	BehaviourNode*		m_pBehaviourNode;
 	// Players
 	Player_Mouse*		m_pPlayer_Mouse;
 	Player_PathFind*	m_pPlayer_PathFindA;
 	Player_PathFind*	m_pPlayer_PathFindB;
 	DecisionAgent*		m_pDecisionAgent;
-	grandchildNoot*		m_pLilNooter;
+	LilNooter*			m_pLilNooter;
 	
 	float m_cameraX, m_cameraY;
 };

@@ -9,6 +9,7 @@ DecisionWander::DecisionWander()
 
 DecisionWander::~DecisionWander()
 {
+	delete m_pBehaviourWander;
 }
 
 void DecisionWander::MakeDecision(Agent* pAgent, float fDeltaTime)
@@ -21,7 +22,7 @@ void DecisionWander::MakeDecision(Agent* pAgent, float fDeltaTime)
 	if (v2Velocity.Magnitude() > 60.0f)
 	{
 		v2Velocity.Normalise();
-		v2Velocity = v2Velocity * 60.0f;
+		v2Velocity = v2Velocity * 60.02;
 	}
 
 	pAgent->SetPosition(pAgent->GetPosition() + v2Velocity * fDeltaTime);

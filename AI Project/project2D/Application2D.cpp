@@ -9,15 +9,16 @@
 #include "GridNode.h"
 #include "AStarNode.h"
 #include "Agent.h"
+// Other
+#include "BehaviourNode.h"
+#include "stateMovement.h"
+#include "Grid.h"
+#include <vector>
 // Players
 #include "Player_Mouse.h"
 #include "Player_PathFind.h"
 #include "DecisionAgent.h"
-#include "grandchildNoot.h"
-// Other
-#include "stateMovement.h"
-#include "Grid.h"
-#include <vector>
+#include "LilNooter.h"
 
 using namespace std;
 
@@ -69,8 +70,10 @@ bool Application2D::startup()
 	m_pDecisionAgent = new DecisionAgent();
 	_ASSERT(m_pDecisionAgent);
 
-	m_pLilNooter = new grandchildNoot();
+	m_pLilNooter = new LilNooter();
 	_ASSERT(m_pLilNooter);
+
+	m_pBehaviourNode = new BehaviourNode();
 
 	//m_pGrid = new Grid;
 	Grid::create();

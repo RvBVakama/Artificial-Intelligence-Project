@@ -27,6 +27,12 @@
 #define CIRCLE_RADIUS 160.0f * 4
 
 //------------------------------------------------
+// Arrive Behaviour
+//------------------------------------------------
+#define SLOWING_RADIUS 50.0f
+#define MAX_VELOCITY 50.0f
+
+//------------------------------------------------
 // List of some state/s that are used in the app
 //------------------------------------------------
 enum PLAYER_MOUSE_STATES
