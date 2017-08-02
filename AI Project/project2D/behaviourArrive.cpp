@@ -2,7 +2,7 @@
 #include "LilNooter.h"
 #include "Define.h"
 
-behaviourArrive::behaviourArrive(float fWeighting)
+behaviourArrive::behaviourArrive(float fWeighting) : IBehaviour(fWeighting)
 {
 	m_pLilNooter = new LilNooter();
 	_ASSERT(m_pLilNooter);

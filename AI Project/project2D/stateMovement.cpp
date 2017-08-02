@@ -24,8 +24,6 @@ void stateMovement::OnEnter()
 
 void stateMovement::OnUpdate(Agent* pAgent, float fDeltaTime)
 {
-	Vector2 v2TotalForce;
-
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_Q))
 	{
 		m_BehaviourList[0]->m_fWeighting += 0.01f;
@@ -43,6 +41,8 @@ void stateMovement::OnUpdate(Agent* pAgent, float fDeltaTime)
 		m_BehaviourList[0]->m_fWeighting = 0.50f;
 		m_BehaviourList[1]->m_fWeighting = 0.50f;
 	}
+
+	Vector2 v2TotalForce;
 
 	//updates states and combines with weighting
 	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)

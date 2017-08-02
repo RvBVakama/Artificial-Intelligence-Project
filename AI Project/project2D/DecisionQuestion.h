@@ -10,5 +10,5 @@ public:
 	//BaseDecision* m_pTrueDecision;
 	BaseDecision* m_ArriveDecision;
 	//BaseDecision* m_pFalseDecision;
-	BaseDecision* m_SeekDecision;
+	//BaseDecision* m_SeekDecision;
 };

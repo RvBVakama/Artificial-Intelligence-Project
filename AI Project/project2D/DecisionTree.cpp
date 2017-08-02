@@ -4,7 +4,6 @@
 //#include "DecisionPrint.h"
 #include "DecisionArrive.h"
 #include "DecisionSeek.h"
-////#include "SeekBehaviourForBehaviourTree.h"
 //#include "DecisionNothingPressed.h"
 
 DecisionTree::DecisionTree()
@@ -18,9 +17,9 @@ DecisionTree::DecisionTree()
 
 DecisionTree::~DecisionTree()
 {
-	delete m_pRoot->m_pWanderDecision;
-	//delete m_pRoot->m_pTrueDecision;
 	delete m_pRoot->m_ArriveDecision;
+	//delete m_pRoot->m_pTrueDecision;
+	delete m_pRoot->m_pWanderDecision;
 	//delete m_pRoot->m_pFalseDecision;
 	delete m_pRoot;
 }

@@ -129,9 +129,6 @@
     <ClCompile Include="IBehaviour.cpp">
       <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
-    <ClCompile Include="Player_Behaviour.cpp">
-      <Filter>Source Files\UnSorted</Filter>
-    </ClCompile>
     <ClCompile Include="behaviourPursue.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
@@ -149,6 +146,9 @@
     </ClCompile>
     <ClCompile Include="behaviourKeyboard.cpp">
       <Filter>Source Files\Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_BehaviourTree.cpp">
+      <Filter>Source Files\UnSorted</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -296,9 +296,6 @@
     <ClInclude Include="IBehaviour.h">
       <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
-    <ClInclude Include="Player_Behaviour.h">
-      <Filter>Header Files\UnSorted</Filter>
-    </ClInclude>
     <ClInclude Include="behaviourPursue.h">
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
@@ -316,6 +313,9 @@
     </ClInclude>
     <ClInclude Include="behaviourKeyboard.h">
       <Filter>Header Files\Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_BehaviourTree.h">
+      <Filter>Header Files\UnSorted</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

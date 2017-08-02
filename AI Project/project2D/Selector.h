@@ -9,7 +9,7 @@ public:
 		BehaviourNode* child = pendingNode;
 		unsigned int i = -1;
 
-		if (!child)
+		if (child)
 			i = 0;
 
 		for (; i < children.size(); ++i)
@@ -36,4 +36,3 @@ public:
 		return EBEHAVIOUR_FAILURE;
 	}
 };
-

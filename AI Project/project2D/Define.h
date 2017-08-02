@@ -23,14 +23,14 @@
 //------------------------------------------------
 // Wander Behaviour
 //------------------------------------------------
-#define CIRCLE_DISTANCE 240.0f * 4
-#define CIRCLE_RADIUS 160.0f * 4
+#define CIRCLE_DISTANCE 120.0f
+#define CIRCLE_RADIUS 80.0f
 
 //------------------------------------------------
 // Arrive Behaviour
 //------------------------------------------------
-#define SLOWING_RADIUS 50.0f
-#define MAX_VELOCITY 50.0f
+#define SLOWING_RADIUS 75.0f
+#define MAX_VELOCITY 100.0f
 
 //------------------------------------------------
 // List of some state/s that are used in the app

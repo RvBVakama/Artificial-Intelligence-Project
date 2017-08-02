@@ -1,30 +1,59 @@
 #include "DecisionArrive.h"
 #include "behaviourArrive.h"
+#include "FleeBehaviour.h"
 #include "Agent.h"
+#include "Input.h"
 
 DecisionArrive::DecisionArrive()
 {
-	m_pBehaviourArrive = new behaviourArrive(1.0f);
+	m_BehaviourList.push_back(new behaviourArrive(0.50f));
+	m_BehaviourList.push_back(new FleeBehaviour(0.50f));
 }
 
 DecisionArrive::~DecisionArrive()
 {
-	delete m_pBehaviourArrive;
+	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
+	{
+		delete m_BehaviourList[i];
+	}
 }
 
 void DecisionArrive::MakeDecision(Agent * pAgent, float fDeltaTime)
 {
-	Vector2 v2Force = m_pBehaviourArrive->Calculate(pAgent, fDeltaTime);
-
-	Vector2 v2Velocity = pAgent->GetVelocity();
-	v2Velocity = v2Velocity + v2Force * 10.0f * fDeltaTime;
-
-	if (v2Velocity.Magnitude() > 60.0f)
+	if (Input::getInstance()->isKeyDown(INPUT_KEY_F))
 	{
-		v2Velocity.Normalise();
-		v2Velocity = v2Velocity * 60.0f;
+		m_BehaviourList[0]->m_fWeighting += 0.01f;
+		m_BehaviourList[1]->m_fWeighting -= 0.01f;
 	}
 
+	if (Input::getInstance()->isKeyDown(INPUT_KEY_H))
+	{
+		m_BehaviourList[0]->m_fWeighting -= 0.01f;
+		m_BehaviourList[1]->m_fWeighting += 0.01f;
+	}
+
+	if (Input::getInstance()->isKeyDown(INPUT_KEY_F) && Input::getInstance()->isKeyDown(INPUT_KEY_H))
+	{
+		m_BehaviourList[0]->m_fWeighting = 0.50f;
+		m_BehaviourList[1]->m_fWeighting = 0.50f;
+	}
+
+	Vector2 v2Velocity = pAgent->GetVelocity();
+
+	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
+	{
+		Vector2 v2Force = m_BehaviourList[i]->Calculate(pAgent, fDeltaTime);
+		v2Force = v2Force * m_BehaviourList[i]->m_fWeighting;
+
+		v2Velocity = v2Velocity + v2Force * 10.0f * fDeltaTime;
+
+		if (v2Velocity.Magnitude() > 100.0f)
+		{
+			v2Velocity.Normalise();
+			v2Velocity = v2Velocity * 100.0f;
+			break;
+		}
+	}
 	pAgent->SetPosition(pAgent->GetPosition() + v2Velocity * fDeltaTime);
 	pAgent->SetVelocity(v2Velocity);
 }

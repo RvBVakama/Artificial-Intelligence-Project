@@ -11,6 +11,4 @@ public:
 	void OnUpdate(Agent* pAgent, float fDeltaTime);
 	void OnDraw(Renderer2D* renderer2d);
 	void OnExit();
-
-private:
 };

@@ -10,7 +10,6 @@
 #include "AStarNode.h"
 #include "Agent.h"
 // Other
-#include "BehaviourNode.h"
 #include "stateMovement.h"
 #include "Grid.h"
 #include <vector>
@@ -19,6 +18,7 @@
 #include "Player_PathFind.h"
 #include "DecisionAgent.h"
 #include "LilNooter.h"
+#include "Player_BehaviourTree.h"
 
 using namespace std;
 
@@ -73,7 +73,8 @@ bool Application2D::startup()
 	m_pLilNooter = new LilNooter();
 	_ASSERT(m_pLilNooter);
 
-	m_pBehaviourNode = new BehaviourNode();
+	m_pPlayer_BehaviourTree = new Player_BehaviourTree();
+	_ASSERT(m_pPlayer_BehaviourTree);
 
 	//m_pGrid = new Grid;
 	Grid::create();
@@ -88,15 +89,18 @@ bool Application2D::startup()
 // Deletes and destroys all managers, states etc... to prevent memory leaks.
 // ---------------------------------------------------------------------------------
 void Application2D::shutdown() {
-
-	// Players
-	delete m_pLilNooter;
-	delete m_pDecisionAgent;
-	delete m_pPlayer_PathFindA;
-	delete m_pPlayer_PathFindB;
-	delete m_pPlayer_Mouse;
+	
 	// Other
 	Grid::destroy();
+	// Players
+	delete m_pPlayer_BehaviourTree;
+	delete m_pLilNooter;
+	delete m_pDecisionAgent;
+	delete m_pPlayer_PathFindB;
+	delete m_pPlayer_PathFindA;
+	delete m_pPlayer_Mouse;
+	// Other
+	delete m_pStateMachine;
 	ResourceManager<Texture>::Destroy();
 	CollisionManager::Destroy();
 	delete m_2dRenderer;
@@ -124,6 +128,7 @@ void Application2D::update(float deltaTime) {
 	m_pPlayer_PathFindA->Update(deltaTime);
 	m_pPlayer_PathFindB->Update(deltaTime);
 	m_pDecisionAgent->Update(deltaTime);
+	m_pPlayer_BehaviourTree->Update(deltaTime);
 }
 
 // ---------------------------------------------------------------------------------
@@ -152,6 +157,7 @@ void Application2D::draw() {
 	m_pPlayer_PathFindB->Draw(m_2dRenderer);
 	m_pDecisionAgent->Draw(m_2dRenderer);
 	m_pLilNooter->Draw(m_2dRenderer);
+	m_pPlayer_BehaviourTree->Draw(m_2dRenderer);
 
 	m_2dRenderer->end();
 }

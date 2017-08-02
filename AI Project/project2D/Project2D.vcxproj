@@ -190,7 +190,7 @@
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="LilNooter.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player_Behaviour.cpp" />
+    <ClCompile Include="Player_BehaviourTree.cpp" />
     <ClCompile Include="Player_PathFind.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
     <ClCompile Include="Player_Mouse.cpp" />
@@ -241,7 +241,7 @@
     <ClInclude Include="LilNooter.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListNode.h" />
-    <ClInclude Include="Player_Behaviour.h" />
+    <ClInclude Include="Player_BehaviourTree.h" />
     <ClInclude Include="Player_PathFind.h" />
     <ClInclude Include="Question.h" />
     <ClInclude Include="Resource.h" />

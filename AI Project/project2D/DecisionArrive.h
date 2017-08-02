@@ -10,8 +10,8 @@ public:
 	virtual ~DecisionArrive();
 
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
-
+	
 private:
-	behaviourArrive* m_pBehaviourArrive;
+	//behaviourArrive* m_pBehaviourArrive;
 };
 

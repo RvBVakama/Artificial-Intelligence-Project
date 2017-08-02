@@ -54,7 +54,7 @@ void Player_Mouse::Draw(Renderer2D* pRenderer2D)
 {
 	m_pAIStateMachine->Draw(pRenderer2D);
 
-	//Draw Player
+	// Draw Player
 	pRenderer2D->setRenderColour(0xFF0080FF);
 	pRenderer2D->drawBox(m_v2Pos.x, m_v2Pos.y, 20, 20 ,0, 0);
 	pRenderer2D->setRenderColour(0xFFFFFFFF);

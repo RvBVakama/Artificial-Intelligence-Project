@@ -8,7 +8,7 @@ public:
 	virtual ~DecisionButtonPressed();
 
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
-
+	
 private:
 	bool toggle;
 };

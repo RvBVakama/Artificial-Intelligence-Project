@@ -25,6 +25,7 @@ Player_PathFind::Player_PathFind(int StartNode, int EndNode)
 Player_PathFind::~Player_PathFind()
 {
 	delete m_pstatePathFind;
+	delete m_pAIStateMachine;
 }
 
 void Player_PathFind::Update(float deltaTime)
@@ -36,7 +37,7 @@ void Player_PathFind::Draw(Renderer2D * pRenderer2D)
 {
 	m_pAIStateMachine->Draw(pRenderer2D);
 
-	//Draw Player
+	// Draw Player
 	pRenderer2D->setRenderColour(0x32CD32FF);
 	pRenderer2D->drawBox(m_v2Pos.x, m_v2Pos.y, 25, 25);
 	pRenderer2D->setRenderColour(0xFFFFFFFF);
