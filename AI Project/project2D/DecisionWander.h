@@ -7,7 +7,7 @@ class DecisionWander : public BaseDecision
 {
 public:
 	DecisionWander();
-	virtual ~DecisionWander();
+	~DecisionWander();
 
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
 

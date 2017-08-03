@@ -11,10 +11,10 @@ Player_PathFind::Player_PathFind(int StartNode, int EndNode)
 	nEndNode = EndNode;
 
 	m_pAIStateMachine = new AIStateMachine();
-	_ASSERT(m_pAIStateMachine);
+	//_ASSERT(m_pAIStateMachine);
 
 	m_pstatePathFind = new statePathFind();
-	_ASSERT(m_pstatePathFind);
+	//_ASSERT(m_pstatePathFind);
 
 	// Registering all possible states
 	m_pAIStateMachine->RegisterState(E_STATEPATHFIND, m_pstatePathFind);

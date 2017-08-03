@@ -5,7 +5,7 @@ class DecisionArrive : public BaseDecision
 {
 public:
 	DecisionArrive();
-	virtual ~DecisionArrive();
+	~DecisionArrive();
 
 	void MakeDecision(Agent* pAgent, float fDeltaTime);
 };

@@ -5,10 +5,7 @@ class ActionSeek : public BehaviourNode
 {
 public:
 	ActionSeek();
+	virtual ~ActionSeek();
 
-	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime)
-	{
-
-		return EBEHAVIOUR_SUCCESS;
-	}
+	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime);
 };

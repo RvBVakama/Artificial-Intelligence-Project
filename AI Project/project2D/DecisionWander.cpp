@@ -12,7 +12,10 @@ DecisionWander::DecisionWander()
 
 DecisionWander::~DecisionWander()
 {
-	delete m_pBehaviourWander;
+	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
+	{
+		delete m_BehaviourList[i];
+	}
 }
 
 void DecisionWander::MakeDecision(Agent* pAgent, float fDeltaTime)

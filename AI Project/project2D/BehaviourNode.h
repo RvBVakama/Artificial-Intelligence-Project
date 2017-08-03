@@ -16,6 +16,8 @@ enum EBehaviourResult
 class BehaviourNode
 {
 public:
+	BehaviourNode() {};
+	virtual ~BehaviourNode() {};
 	virtual EBehaviourResult Execute(Agent* pAgent, float fDeltaTime) = 0;
 
 protected:

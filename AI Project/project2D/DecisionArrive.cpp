@@ -16,6 +16,7 @@ DecisionArrive::~DecisionArrive()
 	{
 		delete m_BehaviourList[i];
 	}
+	//help //cannot step out of function, creating memory leaks.
 }
 
 void DecisionArrive::MakeDecision(Agent * pAgent, float fDeltaTime)

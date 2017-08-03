@@ -92,7 +92,7 @@ void Application2D::shutdown() {
 	
 	// Other
 	Grid::destroy();
-	// Players
+	//// Players
 	delete m_pPlayer_BehaviourTree;
 	delete m_pLilNooter;
 	delete m_pDecisionAgent;
@@ -128,6 +128,7 @@ void Application2D::update(float deltaTime) {
 	m_pPlayer_PathFindA->Update(deltaTime);
 	m_pPlayer_PathFindB->Update(deltaTime);
 	m_pDecisionAgent->Update(deltaTime);
+	m_pLilNooter->Update(deltaTime);
 	m_pPlayer_BehaviourTree->Update(deltaTime);
 }
 

@@ -5,7 +5,7 @@
 
 ActionControl::ActionControl()
 {
-	m_BehaviourList.push_back(new behaviourKeyboard(398.00f));
+	m_BehaviourList.push_back(new behaviourKeyboard(380.0f));
 	m_BehaviourList.push_back(new behaviourWander(500.00f));
 }
 
