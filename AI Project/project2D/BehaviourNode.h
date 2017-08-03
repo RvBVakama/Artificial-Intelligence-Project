@@ -1,6 +1,10 @@
 #pragma once
+#include <vector>
 
 class Agent;
+class IBehaviour;
+
+using namespace std;
 
 enum EBehaviourResult
 {
@@ -13,4 +17,7 @@ class BehaviourNode
 {
 public:
 	virtual EBehaviourResult Execute(Agent* pAgent, float fDeltaTime) = 0;
+
+protected:
+	vector<IBehaviour*> m_BehaviourList;
 };

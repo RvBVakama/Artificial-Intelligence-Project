@@ -161,6 +161,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ActionControl.cpp" />
+    <ClCompile Include="ActionSeek.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="AIBaseState.cpp" />
     <ClCompile Include="AIStateMachine.cpp" />
@@ -200,6 +202,7 @@
     <ClCompile Include="statePathFind.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="ActionSeek.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AIBaseState.h" />
     <ClInclude Include="AIStateMachine.h" />
@@ -208,13 +211,13 @@
     <ClInclude Include="AStarNode.h" />
     <ClInclude Include="BaseDecision.h" />
     <ClInclude Include="BaseState.h" />
-    <ClInclude Include="BehaviourAction.h" />
+    <ClInclude Include="ActionControl.h" />
     <ClInclude Include="behaviourArrive.h" />
     <ClInclude Include="behaviourIdle.h" />
     <ClInclude Include="behaviourKeyboard.h" />
     <ClInclude Include="behaviourPatrol.h" />
     <ClInclude Include="behaviourPursue.h" />
-    <ClInclude Include="BehaviourQuestion.h" />
+    <ClInclude Include="BehaviourButtonPressed.h" />
     <ClInclude Include="BehaviourNode.h" />
     <ClInclude Include="behaviourWander.h" />
     <ClInclude Include="Collider.h" />
@@ -243,7 +246,6 @@
     <ClInclude Include="ListNode.h" />
     <ClInclude Include="Player_BehaviourTree.h" />
     <ClInclude Include="Player_PathFind.h" />
-    <ClInclude Include="Question.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SeekBehaviour.h" />

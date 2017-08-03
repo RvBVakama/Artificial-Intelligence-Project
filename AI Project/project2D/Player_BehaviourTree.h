@@ -1,5 +1,6 @@
 #pragma once
 #include "Agent.h"
+#include "Composite.h"
 
 class BehaviourNode;
 

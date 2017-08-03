@@ -1,8 +1,6 @@
 #include "DecisionWander.h"
 #include "behaviourWander.h"
 #include "SeekBehaviour.h"
-//Help//WhatIsSeekAndWhyIsItMyProject
-#include "Seek.h"
 #include "Agent.h"
 #include "Input.h"
 
