@@ -13,12 +13,6 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\UnSorted">
-      <UniqueIdentifier>{c4bc6cd5-f1c8-49d3-829c-fdfed342f761}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\UnSorted">
-      <UniqueIdentifier>{efebee06-3a12-464c-8d35-905a36b09d06}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\Decision">
       <UniqueIdentifier>{96a296d2-a2a2-4ba9-9f89-51d88854f434}</UniqueIdentifier>
     </Filter>
@@ -37,6 +31,12 @@
     <Filter Include="Source Files\BehvaiourTree">
       <UniqueIdentifier>{115e1b86-f255-4169-a1cf-6f8b0cf1a957}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Else">
+      <UniqueIdentifier>{c4bc6cd5-f1c8-49d3-829c-fdfed342f761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Else">
+      <UniqueIdentifier>{efebee06-3a12-464c-8d35-905a36b09d06}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DecisionButtonPressed.cpp">
@@ -49,64 +49,61 @@
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
     <ClCompile Include="Agent.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="AIBaseState.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="AIStateMachine.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Application2D.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="AStar.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="BaseState.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Collider.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="CollisionManager.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="CompositeNode.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Entity.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Grid.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Player_Mouse.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="Player_PathFind.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="stateIdle.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="stateMovement.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="statePathFind.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="DecisionWander.cpp">
       <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="SeekBehaviour.cpp">
-      <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
     <ClCompile Include="FleeBehaviour.cpp">
       <Filter>Source Files\Behaviours</Filter>
@@ -124,7 +121,7 @@
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
     <ClCompile Include="IBehaviour.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="behaviourPursue.cpp">
       <Filter>Source Files\Behaviours</Filter>
@@ -136,7 +133,7 @@
       <Filter>Source Files\Decision</Filter>
     </ClCompile>
     <ClCompile Include="LilNooter.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="behaviourArrive.cpp">
       <Filter>Source Files\Behaviours</Filter>
@@ -145,16 +142,28 @@
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
     <ClCompile Include="Player_BehaviourTree.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="ActionControl.cpp">
       <Filter>Source Files\BehvaiourTree</Filter>
     </ClCompile>
     <ClCompile Include="DecisionTree.cpp">
-      <Filter>Source Files\UnSorted</Filter>
+      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="ActionSeek.cpp">
       <Filter>Source Files\BehvaiourTree</Filter>
+    </ClCompile>
+    <ClCompile Include="obstacleAvoidanceBehaviour.cpp">
+      <Filter>Source Files\Behaviours</Filter>
+    </ClCompile>
+    <ClCompile Include="circle.cpp">
+      <Filter>Source Files\Else</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>Source Files\Else</Filter>
+    </ClCompile>
+    <ClCompile Include="SeekBehaviour.cpp">
+      <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -177,85 +186,85 @@
       <Filter>Header Files\Decision</Filter>
     </ClInclude>
     <ClInclude Include="Agent.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="AIBaseState.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="AIStateMachine.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Application2D.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="AStar.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="AStarNode.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="BaseState.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Collider.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="CollisionManager.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="CompositeNode.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Define.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="DynamicArray.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Entity.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Grid.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="GridNode.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Heap.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="LinkedList.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="ListNode.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Player_Mouse.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Player_PathFind.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Stack.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="stateIdle.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="StateMachine.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="stateMovement.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="statePathFind.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="DecisionWander.h">
       <Filter>Header Files\Decision</Filter>
@@ -276,7 +285,7 @@
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
     <ClInclude Include="DecisionAgent.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="BehaviourNode.h">
       <Filter>Header Files\BehaviourTree</Filter>
@@ -291,7 +300,7 @@
       <Filter>Header Files\BehaviourTree</Filter>
     </ClInclude>
     <ClInclude Include="IBehaviour.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="behaviourPursue.h">
       <Filter>Header Files\Behaviours</Filter>
@@ -303,7 +312,7 @@
       <Filter>Header Files\Decision</Filter>
     </ClInclude>
     <ClInclude Include="LilNooter.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="behaviourArrive.h">
       <Filter>Header Files\Behaviours</Filter>
@@ -312,7 +321,7 @@
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
     <ClInclude Include="Player_BehaviourTree.h">
-      <Filter>Header Files\UnSorted</Filter>
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="BehaviourButtonPressed.h">
       <Filter>Header Files\BehaviourTree</Filter>
@@ -322,6 +331,18 @@
     </ClInclude>
     <ClInclude Include="ActionSeek.h">
       <Filter>Header Files\BehaviourTree</Filter>
+    </ClInclude>
+    <ClInclude Include="obstacleAvoidanceBehaviour.h">
+      <Filter>Header Files\Behaviours</Filter>
+    </ClInclude>
+    <ClInclude Include="point.h">
+      <Filter>Header Files\Else</Filter>
+    </ClInclude>
+    <ClInclude Include="circle.h">
+      <Filter>Header Files\Else</Filter>
+    </ClInclude>
+    <ClInclude Include="Obstacle.h">
+      <Filter>Header Files\Else</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

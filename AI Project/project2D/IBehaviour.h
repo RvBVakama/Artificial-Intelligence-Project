@@ -8,7 +8,7 @@ class IBehaviour
 public:
 	IBehaviour();
 	IBehaviour(float fWeighting);
-	~IBehaviour();
+	virtual ~IBehaviour();
 
 	//Update Function
 	virtual Vector2 Calculate(Agent* pAgent, float fDeltaTime) = 0;

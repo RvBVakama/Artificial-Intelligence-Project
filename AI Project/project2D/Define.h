@@ -33,6 +33,12 @@
 #define MAX_VELOCITY 100.0f
 
 //------------------------------------------------
+// Obstacle Avoidance Behaviour
+//------------------------------------------------
+#define MAX_SEE_AHEAD 100.0f
+#define MAX_AVOID_FORCE 30.0f
+
+//------------------------------------------------
 // List of some state/s that are used in the app
 //------------------------------------------------
 enum PLAYER_MOUSE_STATES

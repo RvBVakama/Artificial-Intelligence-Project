@@ -20,6 +20,8 @@ public:
 	virtual void Draw(Renderer2D* pRenderer2D) = 0;
 
 	Vector2 GetPosition() { return m_v2Pos; }
+	float GetX() { return m_v2Pos.x; }
+	float GetY() { return m_v2Pos.y; }
 	void SetPosition(Vector2 v2Pos) { m_v2Pos = v2Pos; }
 
 	Vector2 GetVelocity() { return m_v2Velocity; }

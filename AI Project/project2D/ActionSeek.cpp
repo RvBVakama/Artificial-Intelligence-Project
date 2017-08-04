@@ -1,10 +1,12 @@
 #include "ActionSeek.h"
 #include "SeekBehaviour.h"
+#include "obstacleAvoidanceBehaviour.h"
 #include "Agent.h"
 
 ActionSeek::ActionSeek()
 {
 	m_BehaviourList.push_back(new SeekBehaviour(100.00f));
+	m_BehaviourList.push_back(new obstacleAvoidanceBehaviour(1000.0f));
 }
 
 ActionSeek::~ActionSeek()
@@ -34,10 +36,10 @@ EBehaviourResult ActionSeek::Execute(Agent* pAgent, float fDeltaTime)
 	}
 
 	v2Velocity = v2Velocity + v2TotalForce * 15.0f * fDeltaTime;
-	if (v2Velocity.Magnitude() > 0.0f)
+	if (v2Velocity.Magnitude() > 50.0f)
 	{
 		v2Velocity.Normalise();
-		v2Velocity = v2Velocity * 500.0f;
+		v2Velocity = v2Velocity * 50.0f;
 	}
 
 	pAgent->SetPosition(pAgent->GetPosition() + v2Velocity * fDeltaTime);

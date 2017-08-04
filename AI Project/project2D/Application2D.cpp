@@ -19,6 +19,7 @@
 #include "DecisionAgent.h"
 #include "LilNooter.h"
 #include "Player_BehaviourTree.h"
+#include "Obstacle.h"
 
 using namespace std;
 
@@ -76,6 +77,8 @@ bool Application2D::startup()
 	m_pPlayer_BehaviourTree = new Player_BehaviourTree();
 	_ASSERT(m_pPlayer_BehaviourTree);
 
+	m_pObstacle = new Obstacle();
+
 	//m_pGrid = new Grid;
 	Grid::create();
 
@@ -93,6 +96,7 @@ void Application2D::shutdown() {
 	// Other
 	Grid::destroy();
 	//// Players
+	delete m_pObstacle;
 	delete m_pPlayer_BehaviourTree;
 	delete m_pLilNooter;
 	delete m_pDecisionAgent;
@@ -130,6 +134,7 @@ void Application2D::update(float deltaTime) {
 	m_pDecisionAgent->Update(deltaTime);
 	m_pLilNooter->Update(deltaTime);
 	m_pPlayer_BehaviourTree->Update(deltaTime);
+	m_pObstacle->Update(deltaTime);
 }
 
 // ---------------------------------------------------------------------------------
@@ -159,6 +164,7 @@ void Application2D::draw() {
 	m_pDecisionAgent->Draw(m_2dRenderer);
 	m_pLilNooter->Draw(m_2dRenderer);
 	m_pPlayer_BehaviourTree->Draw(m_2dRenderer);
+	m_pObstacle->Draw(m_2dRenderer);
 
 	m_2dRenderer->end();
 }

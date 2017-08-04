@@ -175,6 +175,7 @@
     <ClCompile Include="behaviourPatrol.cpp" />
     <ClCompile Include="behaviourPursue.cpp" />
     <ClCompile Include="behaviourWander.cpp" />
+    <ClCompile Include="circle.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
     <ClCompile Include="CompositeNode.cpp" />
@@ -192,6 +193,8 @@
     <ClCompile Include="IBehaviour.cpp" />
     <ClCompile Include="LilNooter.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="obstacleAvoidanceBehaviour.cpp" />
     <ClCompile Include="Player_BehaviourTree.cpp" />
     <ClCompile Include="Player_PathFind.cpp" />
     <ClCompile Include="SeekBehaviour.cpp" />
@@ -220,6 +223,7 @@
     <ClInclude Include="BehaviourButtonPressed.h" />
     <ClInclude Include="BehaviourNode.h" />
     <ClInclude Include="behaviourWander.h" />
+    <ClInclude Include="circle.h" />
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="Composite.h" />
@@ -244,8 +248,11 @@
     <ClInclude Include="LilNooter.h" />
     <ClInclude Include="LinkedList.h" />
     <ClInclude Include="ListNode.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="obstacleAvoidanceBehaviour.h" />
     <ClInclude Include="Player_BehaviourTree.h" />
     <ClInclude Include="Player_PathFind.h" />
+    <ClInclude Include="point.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="ResourceManager.h" />
     <ClInclude Include="SeekBehaviour.h" />

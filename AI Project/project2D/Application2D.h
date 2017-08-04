@@ -13,6 +13,7 @@ class Player_PathFind;
 class DecisionAgent;
 class LilNooter;
 class Player_BehaviourTree;
+class Obstacle;
 
 class Application2D : public aie::Application {
 public:
@@ -39,6 +40,7 @@ private:
 	DecisionAgent*			m_pDecisionAgent;
 	LilNooter*				m_pLilNooter;
 	Player_BehaviourTree*	m_pPlayer_BehaviourTree;
+	Obstacle*				m_pObstacle;
 
 	float m_cameraX, m_cameraY;
 };
