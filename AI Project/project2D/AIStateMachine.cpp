@@ -103,7 +103,7 @@ void AIStateMachine::RegisterState(int nStateIndex, AIBaseState* pState)
 }
 
 //---------------------------------------------------------------------------------------
-// Pops of the top state on the stack allowing to traverse out of menu hierarchy.
+// Pops the current state.
 //---------------------------------------------------------------------------------------
 void AIStateMachine::PopState()
 {

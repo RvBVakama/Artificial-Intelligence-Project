@@ -2,17 +2,34 @@
 #include "GridNode.h"
 #include "Define.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor
+//--------------------------------------------------------------------------------------
 AStar::AStar(int nMaxNodes)
 {
 	m_nMaxNodes = nMaxNodes;
 	m_ClosedList = new bool[nMaxNodes];
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 AStar::~AStar()
 {
 	delete[] m_ClosedList;
 }
 
+//--------------------------------------------------------------------------------------
+// Calculating the force the player needs to move along the path set by AStar and then 
+// updating the player's velocity to match.
+//
+// Param:
+//		pStart: A pointer to the first AStarNode in the path.
+//		pEnd: A pointer to the last AStarNode in the path.
+//		finishedPath: The STL vector array of nodes that make up the path.
+// Return:
+//		Returns a bool, false if no path is found, and true if it found a path.
+//--------------------------------------------------------------------------------------
 bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>* finishedPath)
 {
 	//Reset everything incase there was a previous path.
@@ -122,11 +139,20 @@ bool AStar::CalculatePath(AStarNode* pStart, AStarNode* pEnd, vector<AStarNode*>
 	return false;
 }
 
+//--------------------------------------------------------------------------------------
+// Funciton pointer to set the passed in heuristic to be the one that is used.
+//--------------------------------------------------------------------------------------
 void AStar::SetHeuristic(HeuristicFunction func)
 {
 	HeuristicToCall = func;
 }
 
+//--------------------------------------------------------------------------------------
+// Another part of the funciton pointer heuristic design.
+// 
+// Return:
+//		Returns an int to the first and end nodes.
+//--------------------------------------------------------------------------------------
 int AStar::CalcHeuristic(AStarNode* pNode, AStarNode* pEnd)
 {
 	return HeuristicToCall(pNode, pEnd);

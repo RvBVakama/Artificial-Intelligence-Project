@@ -162,7 +162,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ActionControl.cpp" />
-    <ClCompile Include="ActionSeek.cpp" />
+    <ClCompile Include="ActionSeekandAvoid.cpp" />
     <ClCompile Include="Agent.cpp" />
     <ClCompile Include="AIBaseState.cpp" />
     <ClCompile Include="AIStateMachine.cpp" />
@@ -170,19 +170,14 @@
     <ClCompile Include="AStar.cpp" />
     <ClCompile Include="BaseState.cpp" />
     <ClCompile Include="behaviourArrive.cpp" />
-    <ClCompile Include="behaviourIdle.cpp" />
     <ClCompile Include="behaviourKeyboard.cpp" />
     <ClCompile Include="behaviourPatrol.cpp" />
-    <ClCompile Include="behaviourPursue.cpp" />
     <ClCompile Include="behaviourWander.cpp" />
     <ClCompile Include="circle.cpp" />
     <ClCompile Include="Collider.cpp" />
     <ClCompile Include="CollisionManager.cpp" />
-    <ClCompile Include="CompositeNode.cpp" />
     <ClCompile Include="DecisionButtonPressed.cpp" />
     <ClCompile Include="DecisionArrive.cpp" />
-    <ClCompile Include="DecisionNothingPressed.cpp" />
-    <ClCompile Include="DecisionPrint.cpp" />
     <ClCompile Include="DecisionSeek.cpp" />
     <ClCompile Include="DecisionTree.cpp" />
     <ClCompile Include="DecisionWander.cpp" />
@@ -205,7 +200,7 @@
     <ClCompile Include="statePathFind.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ActionSeek.h" />
+    <ClInclude Include="ActionSeekandAvoid.h" />
     <ClInclude Include="Agent.h" />
     <ClInclude Include="AIBaseState.h" />
     <ClInclude Include="AIStateMachine.h" />
@@ -216,10 +211,8 @@
     <ClInclude Include="BaseState.h" />
     <ClInclude Include="ActionControl.h" />
     <ClInclude Include="behaviourArrive.h" />
-    <ClInclude Include="behaviourIdle.h" />
     <ClInclude Include="behaviourKeyboard.h" />
     <ClInclude Include="behaviourPatrol.h" />
-    <ClInclude Include="behaviourPursue.h" />
     <ClInclude Include="BehaviourButtonPressed.h" />
     <ClInclude Include="BehaviourNode.h" />
     <ClInclude Include="behaviourWander.h" />
@@ -227,11 +220,8 @@
     <ClInclude Include="Collider.h" />
     <ClInclude Include="CollisionManager.h" />
     <ClInclude Include="Composite.h" />
-    <ClInclude Include="CompositeNode.h" />
     <ClInclude Include="DecisionButtonPressed.h" />
     <ClInclude Include="DecisionArrive.h" />
-    <ClInclude Include="DecisionNothingPressed.h" />
-    <ClInclude Include="DecisionPrint.h" />
     <ClInclude Include="DecisionQuestion.h" />
     <ClInclude Include="DecisionSeek.h" />
     <ClInclude Include="DecisionTree.h" />

@@ -11,7 +11,7 @@ StateMachine::StateMachine()
 }
 
 //---------------------------------------------------------------------------------------
-// Default Destructor / Clears the statelist thus releasing all the ram from the states.
+// Default Destructor // Clears the statelist thus releasing all the ram from the states.
 //---------------------------------------------------------------------------------------
 StateMachine::~StateMachine()
 {

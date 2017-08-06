@@ -13,23 +13,11 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
-    <Filter Include="Header Files\Decision">
-      <UniqueIdentifier>{96a296d2-a2a2-4ba9-9f89-51d88854f434}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\Decision">
-      <UniqueIdentifier>{908c9b87-2bc2-43c0-9d93-09946b051810}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\Behaviours">
       <UniqueIdentifier>{ef2c27b8-8530-4278-98c0-6f625e006982}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Behaviours">
       <UniqueIdentifier>{a967e462-a92d-4c46-a3fa-2eabb169080a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Header Files\BehaviourTree">
-      <UniqueIdentifier>{dccf88bc-86aa-4461-9539-f9e7f7678feb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Source Files\BehvaiourTree">
-      <UniqueIdentifier>{115e1b86-f255-4169-a1cf-6f8b0cf1a957}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\Else">
       <UniqueIdentifier>{c4bc6cd5-f1c8-49d3-829c-fdfed342f761}</UniqueIdentifier>
@@ -37,75 +25,192 @@
     <Filter Include="Source Files\Else">
       <UniqueIdentifier>{efebee06-3a12-464c-8d35-905a36b09d06}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\Decision Tree %28Decision Technique%29">
+      <UniqueIdentifier>{96a296d2-a2a2-4ba9-9f89-51d88854f434}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Circle">
+      <UniqueIdentifier>{9ff53bf8-dba8-4f71-ba54-bc35fb3fc34b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\State Machine %28Decision Technique%29">
+      <UniqueIdentifier>{413e2849-d521-4f09-b920-23e64048901c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AStar">
+      <UniqueIdentifier>{6c206f25-6443-4810-b0ff-8b1d0494aaf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine">
+      <UniqueIdentifier>{e102657c-b39b-4f33-a018-35f177d1b931}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine\AI">
+      <UniqueIdentifier>{155e81a0-e17c-4c3f-bba1-e78a9840e6f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\StateMachine\Normal">
+      <UniqueIdentifier>{1e4567b4-ea37-4701-85bf-5cdac9211258}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\ResourceManager">
+      <UniqueIdentifier>{d8f861cd-46cc-49d2-8891-6b4edfbc2ad5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Player / AI Base Classes">
+      <UniqueIdentifier>{5406649a-d7fd-4a4d-ae22-99670eedf9ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Players and AIs">
+      <UniqueIdentifier>{31306530-402a-40ba-ba5f-3334da361379}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Players and AIs\Players %28Human%29">
+      <UniqueIdentifier>{70416fb7-ac0d-40f6-a7c7-6cc5be24de67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Players and AIs\Players %28Computer/AI%29">
+      <UniqueIdentifier>{317daa75-dcc2-471b-8bcb-0e74a8a0cf98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Linked List">
+      <UniqueIdentifier>{ccfca44c-a58b-4cb5-a666-00382dc86106}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\AStar\Grid">
+      <UniqueIdentifier>{028a26ff-1320-4ab3-b6c6-c2311200c865}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Collision Manager">
+      <UniqueIdentifier>{50950500-f216-4e74-8f0b-5a9a376e0a8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Decision Tree %28Decision Technique%29">
+      <UniqueIdentifier>{908c9b87-2bc2-43c0-9d93-09946b051810}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Behaviour Tree %28Decision Technique%29">
+      <UniqueIdentifier>{115e1b86-f255-4169-a1cf-6f8b0cf1a957}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Behaviour Tree %28Decision Technique%29">
+      <UniqueIdentifier>{dccf88bc-86aa-4461-9539-f9e7f7678feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\State Machine %28Decision Technique%29">
+      <UniqueIdentifier>{ed4f3cdb-7cbe-421b-bf87-c85e3ddf555a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Circle">
+      <UniqueIdentifier>{41fa8619-59e3-403f-bc4d-78d7a88f505c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AStar">
+      <UniqueIdentifier>{4550e420-b045-419a-a3c1-b4042c35369c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Collision Manager">
+      <UniqueIdentifier>{f3914acd-6d08-4360-8541-168b67867c70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Player / AI Base Classes">
+      <UniqueIdentifier>{2d730478-fa4d-4d20-8684-167e84caa156}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine">
+      <UniqueIdentifier>{3b974173-c4c3-49a6-ae70-133633352690}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Players and AIs">
+      <UniqueIdentifier>{be76c413-15fa-4c53-918e-4653756ae060}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\AStar\Grid">
+      <UniqueIdentifier>{2e83f2ef-0ca8-49bf-aac9-ac1053a82f90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine\Normal">
+      <UniqueIdentifier>{d8727505-0fa2-40f0-9660-70964720c25f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\StateMachine\AI">
+      <UniqueIdentifier>{bf6f6655-d32c-4b1c-832e-323055a4318d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Players and AIs\Players %28Computer/AI%29">
+      <UniqueIdentifier>{87f9c25b-40c1-4516-9227-f1b04ea58a3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Players and AIs\Players %28Human%29">
+      <UniqueIdentifier>{fd6b77bd-8eff-4dbb-9275-960a32df1f9e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DecisionButtonPressed.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionNothingPressed.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionPrint.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="Agent.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="AIBaseState.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="AIStateMachine.cpp">
-      <Filter>Source Files\Else</Filter>
+      <Filter>Source Files\Decision Tree %28Decision Technique%29</Filter>
     </ClCompile>
     <ClCompile Include="Application2D.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="AStar.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="BaseState.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="Collider.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="CollisionManager.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="CompositeNode.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="Entity.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="Grid.cpp">
       <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="main.cpp">
       <Filter>Source Files\Else</Filter>
     </ClCompile>
-    <ClCompile Include="Player_Mouse.cpp">
+    <ClCompile Include="DecisionWander.cpp">
+      <Filter>Source Files\Decision Tree %28Decision Technique%29</Filter>
+    </ClCompile>
+    <ClCompile Include="IBehaviour.cpp">
       <Filter>Source Files\Else</Filter>
     </ClCompile>
-    <ClCompile Include="Player_PathFind.cpp">
-      <Filter>Source Files\Else</Filter>
+    <ClCompile Include="DecisionArrive.cpp">
+      <Filter>Source Files\Decision Tree %28Decision Technique%29</Filter>
     </ClCompile>
-    <ClCompile Include="stateIdle.cpp">
-      <Filter>Source Files\Else</Filter>
+    <ClCompile Include="DecisionSeek.cpp">
+      <Filter>Source Files\Decision Tree %28Decision Technique%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionControl.cpp">
+      <Filter>Source Files\Behaviour Tree %28Decision Technique%29</Filter>
+    </ClCompile>
+    <ClCompile Include="ActionSeekandAvoid.cpp">
+      <Filter>Source Files\Behaviour Tree %28Decision Technique%29</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionTree.cpp">
+      <Filter>Source Files\Decision Tree %28Decision Technique%29</Filter>
+    </ClCompile>
+    <ClCompile Include="circle.cpp">
+      <Filter>Source Files\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="Grid.cpp">
+      <Filter>Source Files\AStar\Grid</Filter>
+    </ClCompile>
+    <ClCompile Include="AStar.cpp">
+      <Filter>Source Files\AStar</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Source Files\Collision Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Source Files\Collision Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Agent.cpp">
+      <Filter>Source Files\Player / AI Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity.cpp">
+      <Filter>Source Files\Player / AI Base Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="AIBaseState.cpp">
+      <Filter>Source Files\StateMachine\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="AIStateMachine.cpp">
+      <Filter>Source Files\StateMachine\AI</Filter>
+    </ClCompile>
+    <ClCompile Include="BaseState.cpp">
+      <Filter>Source Files\StateMachine\Normal</Filter>
     </ClCompile>
     <ClCompile Include="StateMachine.cpp">
-      <Filter>Source Files\Else</Filter>
+      <Filter>Source Files\StateMachine\Normal</Filter>
+    </ClCompile>
+    <ClCompile Include="LilNooter.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Computer/AI%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Obstacle.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Computer/AI%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_PathFind.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Human%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_Mouse.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Human%29</Filter>
+    </ClCompile>
+    <ClCompile Include="Player_BehaviourTree.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Human%29</Filter>
+    </ClCompile>
+    <ClCompile Include="DecisionAgent.cpp">
+      <Filter>Source Files\Players and AIs\Players %28Human%29</Filter>
+    </ClCompile>
+    <ClCompile Include="stateIdle.cpp">
+      <Filter>Source Files\State Machine %28Decision Technique%29</Filter>
     </ClCompile>
     <ClCompile Include="stateMovement.cpp">
-      <Filter>Source Files\Else</Filter>
+      <Filter>Source Files\State Machine %28Decision Technique%29</Filter>
     </ClCompile>
     <ClCompile Include="statePathFind.cpp">
-      <Filter>Source Files\Else</Filter>
+      <Filter>Source Files\State Machine %28Decision Technique%29</Filter>
     </ClCompile>
-    <ClCompile Include="DecisionWander.cpp">
-      <Filter>Source Files\Decision</Filter>
+    <ClCompile Include="behaviourArrive.cpp">
+      <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
-    <ClCompile Include="FleeBehaviour.cpp">
+    <ClCompile Include="behaviourKeyboard.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
     <ClCompile Include="behaviourPatrol.cpp">
@@ -114,53 +219,11 @@
     <ClCompile Include="behaviourWander.cpp">
       <Filter>Source Files\Behaviours</Filter>
     </ClCompile>
-    <ClCompile Include="behaviourIdle.cpp">
+    <ClCompile Include="FleeBehaviour.cpp">
       <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionAgent.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="IBehaviour.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="behaviourPursue.cpp">
-      <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionArrive.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionSeek.cpp">
-      <Filter>Source Files\Decision</Filter>
-    </ClCompile>
-    <ClCompile Include="LilNooter.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="behaviourArrive.cpp">
-      <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
-    <ClCompile Include="behaviourKeyboard.cpp">
-      <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
-    <ClCompile Include="Player_BehaviourTree.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="ActionControl.cpp">
-      <Filter>Source Files\BehvaiourTree</Filter>
-    </ClCompile>
-    <ClCompile Include="DecisionTree.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="ActionSeek.cpp">
-      <Filter>Source Files\BehvaiourTree</Filter>
     </ClCompile>
     <ClCompile Include="obstacleAvoidanceBehaviour.cpp">
       <Filter>Source Files\Behaviours</Filter>
-    </ClCompile>
-    <ClCompile Include="circle.cpp">
-      <Filter>Source Files\Else</Filter>
-    </ClCompile>
-    <ClCompile Include="Obstacle.cpp">
-      <Filter>Source Files\Else</Filter>
     </ClCompile>
     <ClCompile Include="SeekBehaviour.cpp">
       <Filter>Source Files\Behaviours</Filter>
@@ -168,51 +231,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseDecision.h">
-      <Filter>Header Files\Decision</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="DecisionButtonPressed.h">
-      <Filter>Header Files\Decision</Filter>
-    </ClInclude>
-    <ClInclude Include="DecisionNothingPressed.h">
-      <Filter>Header Files\Decision</Filter>
-    </ClInclude>
-    <ClInclude Include="DecisionPrint.h">
-      <Filter>Header Files\Decision</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="DecisionQuestion.h">
-      <Filter>Header Files\Decision</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="DecisionTree.h">
-      <Filter>Header Files\Decision</Filter>
-    </ClInclude>
-    <ClInclude Include="Agent.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="AIBaseState.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="AIStateMachine.h">
-      <Filter>Header Files\Else</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="Application2D.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="AStar.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="AStarNode.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="BaseState.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Collider.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="CollisionManager.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="CompositeNode.h">
       <Filter>Header Files\Else</Filter>
     </ClInclude>
     <ClInclude Include="Define.h">
@@ -221,53 +251,8 @@
     <ClInclude Include="DynamicArray.h">
       <Filter>Header Files\Else</Filter>
     </ClInclude>
-    <ClInclude Include="Entity.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Grid.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="GridNode.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Heap.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="LinkedList.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="ListNode.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Player_Mouse.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Player_PathFind.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Resource.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="ResourceManager.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="Stack.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="stateIdle.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="StateMachine.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="stateMovement.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
-    <ClInclude Include="statePathFind.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
     <ClInclude Include="DecisionWander.h">
-      <Filter>Header Files\Decision</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="behaviourPatrol.h">
       <Filter>Header Files\Behaviours</Filter>
@@ -281,38 +266,26 @@
     <ClInclude Include="behaviourWander.h">
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
-    <ClInclude Include="behaviourIdle.h">
-      <Filter>Header Files\Behaviours</Filter>
-    </ClInclude>
-    <ClInclude Include="DecisionAgent.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviourNode.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="Composite.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="Selector.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="Sequence.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="IBehaviour.h">
       <Filter>Header Files\Else</Filter>
     </ClInclude>
-    <ClInclude Include="behaviourPursue.h">
-      <Filter>Header Files\Behaviours</Filter>
-    </ClInclude>
     <ClInclude Include="DecisionArrive.h">
-      <Filter>Header Files\Decision</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="DecisionSeek.h">
-      <Filter>Header Files\Decision</Filter>
-    </ClInclude>
-    <ClInclude Include="LilNooter.h">
-      <Filter>Header Files\Else</Filter>
+      <Filter>Header Files\Decision Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="behaviourArrive.h">
       <Filter>Header Files\Behaviours</Filter>
@@ -320,29 +293,104 @@
     <ClInclude Include="behaviourKeyboard.h">
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
-    <ClInclude Include="Player_BehaviourTree.h">
-      <Filter>Header Files\Else</Filter>
-    </ClInclude>
     <ClInclude Include="BehaviourButtonPressed.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="ActionControl.h">
-      <Filter>Header Files\BehaviourTree</Filter>
-    </ClInclude>
-    <ClInclude Include="ActionSeek.h">
-      <Filter>Header Files\BehaviourTree</Filter>
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
     </ClInclude>
     <ClInclude Include="obstacleAvoidanceBehaviour.h">
       <Filter>Header Files\Behaviours</Filter>
     </ClInclude>
+    <ClInclude Include="ActionSeekandAvoid.h">
+      <Filter>Header Files\Behaviour Tree %28Decision Technique%29</Filter>
+    </ClInclude>
+    <ClInclude Include="stateMovement.h">
+      <Filter>Header Files\State Machine %28Decision Technique%29</Filter>
+    </ClInclude>
+    <ClInclude Include="statePathFind.h">
+      <Filter>Header Files\State Machine %28Decision Technique%29</Filter>
+    </ClInclude>
+    <ClInclude Include="stateIdle.h">
+      <Filter>Header Files\State Machine %28Decision Technique%29</Filter>
+    </ClInclude>
     <ClInclude Include="point.h">
-      <Filter>Header Files\Else</Filter>
+      <Filter>Header Files\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="AStar.h">
+      <Filter>Header Files\AStar</Filter>
+    </ClInclude>
+    <ClInclude Include="AStarNode.h">
+      <Filter>Header Files\AStar</Filter>
     </ClInclude>
     <ClInclude Include="circle.h">
-      <Filter>Header Files\Else</Filter>
+      <Filter>Header Files\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="AIBaseState.h">
+      <Filter>Header Files\StateMachine\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="AIStateMachine.h">
+      <Filter>Header Files\StateMachine\AI</Filter>
+    </ClInclude>
+    <ClInclude Include="Stack.h">
+      <Filter>Header Files\StateMachine\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="StateMachine.h">
+      <Filter>Header Files\StateMachine\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Header Files\ResourceManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Header Files\Player / AI Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="Agent.h">
+      <Filter>Header Files\Player / AI Base Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseState.h">
+      <Filter>Header Files\StateMachine\Normal</Filter>
+    </ClInclude>
+    <ClInclude Include="DecisionAgent.h">
+      <Filter>Header Files\Players and AIs\Players %28Human%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_BehaviourTree.h">
+      <Filter>Header Files\Players and AIs\Players %28Human%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_Mouse.h">
+      <Filter>Header Files\Players and AIs\Players %28Human%29</Filter>
+    </ClInclude>
+    <ClInclude Include="Player_PathFind.h">
+      <Filter>Header Files\Players and AIs\Players %28Human%29</Filter>
     </ClInclude>
     <ClInclude Include="Obstacle.h">
-      <Filter>Header Files\Else</Filter>
+      <Filter>Header Files\Players and AIs\Players %28Computer/AI%29</Filter>
+    </ClInclude>
+    <ClInclude Include="LilNooter.h">
+      <Filter>Header Files\Players and AIs\Players %28Computer/AI%29</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+    <ClInclude Include="ListNode.h">
+      <Filter>Header Files\Linked List</Filter>
+    </ClInclude>
+    <ClInclude Include="Grid.h">
+      <Filter>Header Files\AStar\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="GridNode.h">
+      <Filter>Header Files\AStar\Grid</Filter>
+    </ClInclude>
+    <ClInclude Include="Heap.h">
+      <Filter>Header Files\AStar</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Header Files\Collision Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Header Files\Collision Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -4,15 +4,34 @@
 
 using namespace aie;
 
+//--------------------------------------------------------------------------------------
+// Alternate Constructor 
+//
+// Param:
+//		fWeighting: Used to change the amount of force to apply to the velocity of the 
+//					target object.
+//--------------------------------------------------------------------------------------
 SeekBehaviour::SeekBehaviour(float fWeighting) : IBehaviour(fWeighting)
 {
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 SeekBehaviour::~SeekBehaviour()
 {
 }
 
-Vector2 SeekBehaviour::Calculate(Agent * pAgent, float fDeltaTime)
+//--------------------------------------------------------------------------------------
+// Steers the player in the direction of the mouse.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get the players position.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+// Return:
+//		Returns the force velocity to be applied to the player, as a Vector2.
+//--------------------------------------------------------------------------------------
+Vector2 SeekBehaviour::Calculate(Agent* pAgent, float fDeltaTime)
 {
 	int nMouseX;
 	int nMouseY;

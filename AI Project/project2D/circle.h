@@ -1,49 +1,43 @@
 //--------------------------------------------------------------------------------------
-// Class for the DecisionAgent
+// Class for Circles
 //--------------------------------------------------------------------------------------
 #pragma once
-#include "Agent.h"
-#include "Renderer2D.h"
-#include <vector>
+#include "Point.h"
 
-using namespace aie;
-
-class DecisionTree;
-
-//--------------------------------------------------------------------------------------
-// DecisionAgent object
-// Sets a base spawn location, updates the decision tree and renders the player.
-//--------------------------------------------------------------------------------------
-class DecisionAgent : public Agent
+//------------------------------------------------------------------------------------------------------
+// Class used for circles
+//------------------------------------------------------------------------------------------------------
+class Circle : public Point
 {
 public:
 
 	//--------------------------------------------------------------------------------------
 	// Default Constructor
 	//--------------------------------------------------------------------------------------
-	DecisionAgent();
+	Circle();
 
 	//--------------------------------------------------------------------------------------
 	// Default Destructor
 	//--------------------------------------------------------------------------------------
-	~DecisionAgent();
+	virtual ~Circle();
 
 	//--------------------------------------------------------------------------------------
-	// Updating the decision tree
+	// Calculates the damage the player will do with an attack.
 	//
 	// Param:
-	//		fDeltaTime: DeltaTime keeps time in seconds.
+	//		radius: The type of the weapon the player currently has equipped.
 	//--------------------------------------------------------------------------------------
-	void Update(float deltaTime);
+	void SetRadius(int radius);
 
 	//--------------------------------------------------------------------------------------
-	// Drawing the player
+	// Returns the radius of the circle.
 	//
-	// Param:
-	//		fDeltaTime: DeltaTime keeps time in seconds.
+	// Return:
+	//		Returns the radius of the circle as an int.
 	//--------------------------------------------------------------------------------------
-	void Draw(Renderer2D* pRenderer2D);
+	int GetRadius();
 
-private:
-	DecisionTree*		m_pDecisionTree;
+protected:
+	int Radius;
+	double Length;
 };

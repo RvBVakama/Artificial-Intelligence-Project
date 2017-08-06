@@ -1,9 +1,16 @@
+//--------------------------------------------------------------------------------------
+// Class for Composite
+//--------------------------------------------------------------------------------------
 #pragma once
 #include "BehaviourNode.h"
 #include <vector>
 
 using namespace std;
 
+//--------------------------------------------------------------------------------------
+// Composite object
+// Creates a list of children which are behaviour nodes.
+//--------------------------------------------------------------------------------------
 class Composite : public BehaviourNode
 {
 public:

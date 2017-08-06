@@ -1,3 +1,6 @@
+//--------------------------------------------------------------------------------------
+// Class for the AStarEdge
+//--------------------------------------------------------------------------------------
 #pragma once
 
 #include "LinkedList.h"
@@ -7,6 +10,10 @@ using namespace std;
 
 struct AStarNode;
 
+//--------------------------------------------------------------------------------------
+// AStarEdge object
+// Contains all the variables that are used in the AStar pathfinding formula.
+//--------------------------------------------------------------------------------------
 struct AStarEdge
 {
 	AStarNode* m_pEndNode;

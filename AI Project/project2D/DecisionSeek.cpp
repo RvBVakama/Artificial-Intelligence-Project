@@ -2,17 +2,32 @@
 #include "SeekBehaviour.h"
 #include "Agent.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor
+//--------------------------------------------------------------------------------------
 DecisionSeek::DecisionSeek()
 {
 	m_pBehaviourSeek = new SeekBehaviour(1.0f);
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 DecisionSeek::~DecisionSeek()
 {
 	delete m_pBehaviourSeek;
 }
 
-void DecisionSeek::MakeDecision(Agent * pAgent, float fDeltaTime)
+//--------------------------------------------------------------------------------------
+// Calculating the force the player needs to move along the path set by AStar and then 
+// updating the player's velocity to match.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get and set the player's position 
+//				and velocity.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+//--------------------------------------------------------------------------------------
+void DecisionSeek::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	Vector2 v2Force = m_pBehaviourSeek->Calculate(pAgent, fDeltaTime);
 

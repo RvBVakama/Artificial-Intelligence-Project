@@ -23,26 +23,27 @@
 
 using namespace std;
 
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Default Constructor
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 Application2D::Application2D() {
 
 }
 
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Default Destructor
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 Application2D::~Application2D() {
 
 }
-// ---------------------------------------------------------------------------------
+
+//---------------------------------------------------------------------------------
 // Creates the renderer, collision manager, my resource manager and my state
 // manager then registers all possible states and pushes my spash screen state.
 // 
 // Return:
 // 		Returns true.
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 bool Application2D::startup()
 {
 	// Creating everything
@@ -58,7 +59,7 @@ bool Application2D::startup()
 	m_pStateMachine = new StateMachine();
 	_ASSERT(m_pStateMachine);
 
-	// Players
+	// Players (Human Players)
 	m_pPlayer_Mouse = new Player_Mouse();
 	_ASSERT(m_pPlayer_Mouse);
 
@@ -71,15 +72,16 @@ bool Application2D::startup()
 	m_pDecisionAgent = new DecisionAgent();
 	_ASSERT(m_pDecisionAgent);
 
-	m_pLilNooter = new LilNooter();
-	_ASSERT(m_pLilNooter);
-
 	m_pPlayer_BehaviourTree = new Player_BehaviourTree();
 	_ASSERT(m_pPlayer_BehaviourTree);
 
-	m_pObstacle = new Obstacle();
+	// AIs (Computer Players)
+	m_pLilNooter = new LilNooter();
+	_ASSERT(m_pLilNooter);
 
-	//m_pGrid = new Grid;
+	m_pObstacle = new Obstacle();
+	_ASSERT(m_pObstacle);
+
 	Grid::create();
 
 	m_cameraX = -15;
@@ -88,17 +90,18 @@ bool Application2D::startup()
 	return true;
 }
 
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Deletes and destroys all managers, states etc... to prevent memory leaks.
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void Application2D::shutdown() {
 	
 	// Other
 	Grid::destroy();
-	//// Players
+	// AIs
 	delete m_pObstacle;
-	delete m_pPlayer_BehaviourTree;
 	delete m_pLilNooter;
+	// Players
+	delete m_pPlayer_BehaviourTree;
 	delete m_pDecisionAgent;
 	delete m_pPlayer_PathFindB;
 	delete m_pPlayer_PathFindA;
@@ -110,14 +113,14 @@ void Application2D::shutdown() {
 	delete m_2dRenderer;
 }
 
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Updates the state machine and checks if the user has clicked the end key and
 // ends the game.
 // 
 // Param:
 // 		deltaTime: delta time simply is seconds as a float value. It is passed into 
 // the state machine's update function.
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void Application2D::update(float deltaTime) {
 
 	// input example
@@ -128,19 +131,19 @@ void Application2D::update(float deltaTime) {
 		quit();
 
 	// Updating the players
-	m_pPlayer_Mouse->Update(deltaTime);
-	m_pPlayer_PathFindA->Update(deltaTime);
-	m_pPlayer_PathFindB->Update(deltaTime);
-	m_pDecisionAgent->Update(deltaTime);
-	m_pLilNooter->Update(deltaTime);
-	m_pPlayer_BehaviourTree->Update(deltaTime);
-	m_pObstacle->Update(deltaTime);
+	m_pPlayer_Mouse->Update(deltaTime/SLOW_MOTION);
+	m_pPlayer_PathFindA->Update(deltaTime/SLOW_MOTION);
+	m_pPlayer_PathFindB->Update(deltaTime/SLOW_MOTION);
+	m_pDecisionAgent->Update(deltaTime/SLOW_MOTION);
+	m_pLilNooter->Update(deltaTime/SLOW_MOTION);
+	m_pPlayer_BehaviourTree->Update(deltaTime/SLOW_MOTION);
+	m_pObstacle->Update(deltaTime/SLOW_MOTION);
 }
 
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 // Clears the screen then begins the 2d renderer then draws the state machine
 // by passing in the 2d renderer, finally ending the 2d renderer.
-// ---------------------------------------------------------------------------------
+//---------------------------------------------------------------------------------
 void Application2D::draw() {
 
 	// wipe the screen to the background colour
@@ -157,13 +160,14 @@ void Application2D::draw() {
 	int fMouseX = input->getMouseX();
 	int fMouseY = input->getMouseY();
 
-	// Drawing the players
+	// Drawing the players (Human)
 	m_pPlayer_Mouse->Draw(m_2dRenderer);
 	m_pPlayer_PathFindA->Draw(m_2dRenderer);
 	m_pPlayer_PathFindB->Draw(m_2dRenderer);
 	m_pDecisionAgent->Draw(m_2dRenderer);
-	m_pLilNooter->Draw(m_2dRenderer);
 	m_pPlayer_BehaviourTree->Draw(m_2dRenderer);
+	// Drawing the AIs (Computer)
+	m_pLilNooter->Draw(m_2dRenderer);
 	m_pObstacle->Draw(m_2dRenderer);
 
 	m_2dRenderer->end();

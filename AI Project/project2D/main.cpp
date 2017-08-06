@@ -21,34 +21,6 @@
 //-------------------------------------------------------------------------------
 int main() 
 {
-	/*Heap heap;
-
-	AStarNode* node = new AStarNode(0);
-	node->m_nFScore = 10;
-	heap.Push(node);
-
-	node = new AStarNode(0);
-	node->m_nFScore = 1;
-	heap.Push(node);
-
-	node = new AStarNode(0);
-	node->m_nFScore = 7;
-	heap.Push(node);
-
-	node = new AStarNode(0);
-	node->m_nFScore = 5;
-	heap.Push(node);
-
-	node = new AStarNode(0);
-	node->m_nFScore = 3;
-	heap.Push(node);
-
-	std::cout << heap.Pop()->m_nFScore << std::endl;
-	std::cout << heap.Pop()->m_nFScore << std::endl;
-	std::cout << heap.Pop()->m_nFScore << std::endl;
-	std::cout << heap.Pop()->m_nFScore << std::endl;
-	std::cout << heap.Pop()->m_nFScore << std::endl;*/
-
 	// Memory leak checker
 	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 

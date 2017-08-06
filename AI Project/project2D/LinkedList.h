@@ -1,8 +1,15 @@
+//--------------------------------------------------------------------------------------
+// Class for the Iter and LinkedList
+//--------------------------------------------------------------------------------------
 #pragma once
 #include "ListNode.h"
 #include <crtdbg.h>
 
 template <typename T>
+//--------------------------------------------------------------------------------------
+// Iter object
+// Overloads operator and iterates the Linked List.
+//--------------------------------------------------------------------------------------
 class Iter
 {
 public:
@@ -55,6 +62,14 @@ public:
 };
 
 template <typename T>
+
+//--------------------------------------------------------------------------------------
+// LinkedList object
+// An array of which each node is connected together by pointers, every node excluding
+// the first and last have 2 pointers, one points to the next node the other points 
+//  the previous node. Linked lists don't need to be next to each other in
+// memory so they are versatile.
+//--------------------------------------------------------------------------------------
 class LinkedList
 {
 public:

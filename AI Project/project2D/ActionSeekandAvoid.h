@@ -1,53 +1,33 @@
 //--------------------------------------------------------------------------------------
-// Class for Player_Mouse
+// Class for the ActionSeekandAvoid
 //--------------------------------------------------------------------------------------
 #pragma once
-#include "Agent.h"
-#include "Renderer2D.h"
-#include <vector>
-
-using namespace aie;
-
-class AIStateMachine;
-class stateMovement;
-class stateIdle;
+#include "BehaviourNode.h"
 
 //--------------------------------------------------------------------------------------
-// Player_Mouse object
-// The the player that handles seeking and fleeing from the mouse cursor
+// ActionSeekandAvoid object
+// Runs the seek and avoid behaviours weighted so they can work in unison.
 //--------------------------------------------------------------------------------------
-class Player_Mouse : public Agent
+class ActionSeekandAvoid : public BehaviourNode
 {
 public:
 
 	//--------------------------------------------------------------------------------------
-	// Default Constructor // Creating states and pushing the first one.
+	// Default Constructor // Weighting between 2 behaviours
 	//--------------------------------------------------------------------------------------
-	Player_Mouse();
+	ActionSeekandAvoid();
 
 	//--------------------------------------------------------------------------------------
 	// Default Destructor
 	//--------------------------------------------------------------------------------------
-	~Player_Mouse();
+	virtual ~ActionSeekandAvoid();
 
 	//--------------------------------------------------------------------------------------
-	// If the player presses and holds a defined key the current state will chagne.
+	// Based on the weighting this function makes the player seek and avoid collision zones.
 	//
 	// Param:
+	//		pAgent: A pointer to the agent so we can get and set the players position.
 	//		fDeltaTime: DeltaTime keeps time in seconds.
 	//--------------------------------------------------------------------------------------
-	void Update(float deltaTime);
-
-	//--------------------------------------------------------------------------------------
-	// Drawing the current state.
-	//
-	// Param:
-	//		pRenderer2D: A pointer to the 2D rendering engine.
-	//--------------------------------------------------------------------------------------
-	void Draw(Renderer2D* pRenderer2D);
-
-private:
-	AIStateMachine*		m_pAIStateMachine;
-	stateMovement*		m_pstateMovement;
-	stateIdle*			m_pStateIdle;
+	EBehaviourResult Execute(Agent* pAgent, float fDeltaTime);
 };

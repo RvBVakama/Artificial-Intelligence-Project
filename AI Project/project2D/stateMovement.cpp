@@ -4,12 +4,18 @@
 #include "Agent.h"
 #include "Input.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor // Weighting 2 behaviours
+//--------------------------------------------------------------------------------------
 stateMovement::stateMovement()
 {	
 	m_BehaviourList.push_back(new SeekBehaviour(0.50f));
 	m_BehaviourList.push_back(new FleeBehaviour(0.50f));
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 stateMovement::~stateMovement()
 {
 	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
@@ -18,10 +24,21 @@ stateMovement::~stateMovement()
 	}
 }
 
+//--------------------------------------------------------------------------------------
+// Optional function to run.
+//--------------------------------------------------------------------------------------
 void stateMovement::OnEnter()
 {
 }
 
+//--------------------------------------------------------------------------------------
+// Calculating the force the player needs to move towards or away from the mouse cursor
+// using weighting.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get and set the players position.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+//--------------------------------------------------------------------------------------
 void stateMovement::OnUpdate(Agent* pAgent, float fDeltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_Q))
@@ -65,10 +82,19 @@ void stateMovement::OnUpdate(Agent* pAgent, float fDeltaTime)
 	pAgent->SetPosition(pAgent->GetPosition() + v2TotalForce);
 }
 
+//--------------------------------------------------------------------------------------
+// Currently, nothing draws in this class.
+//
+// Param:
+//		pRenderer2D: A pointer to the 2D rendering engine.
+//--------------------------------------------------------------------------------------
 void stateMovement::OnDraw(Renderer2D * renderer2d)
 {
 }
 
+//--------------------------------------------------------------------------------------
+// Optional function to run.
+//--------------------------------------------------------------------------------------
 void stateMovement::OnExit()
 {
 }

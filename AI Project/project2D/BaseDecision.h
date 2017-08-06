@@ -1,3 +1,6 @@
+//--------------------------------------------------------------------------------------
+// Class for the BaseDecision
+//--------------------------------------------------------------------------------------
 #pragma once
 #include <vector>
 
@@ -6,6 +9,10 @@ using namespace std;
 class Agent;
 class IBehaviour;
 
+//--------------------------------------------------------------------------------------
+// BaseDecision object
+// Base class that defines the functions needed by decision classes.
+//--------------------------------------------------------------------------------------
 class BaseDecision
 {
 public:

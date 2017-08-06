@@ -1,3 +1,6 @@
+//--------------------------------------------------------------------------------------
+// Class for the Application2D
+//--------------------------------------------------------------------------------------
 #pragma once
 #include "Application.h"
 #include "Renderer2D.h"
@@ -11,20 +14,56 @@ class Agent;
 class Player_Mouse;
 class Player_PathFind;
 class DecisionAgent;
-class LilNooter;
 class Player_BehaviourTree;
+// AIs
+class LilNooter;
 class Obstacle;
 
+//--------------------------------------------------------------------------------------
+// Application2D object
+// Creates updates and draws all elements in the game/app.
+//--------------------------------------------------------------------------------------
 class Application2D : public aie::Application {
 public:
 
+	//---------------------------------------------------------------------------------
+	// Default Constructor
+	//---------------------------------------------------------------------------------
 	Application2D();
+
+	//---------------------------------------------------------------------------------
+	// Default Destructor
+	//---------------------------------------------------------------------------------
 	virtual ~Application2D();
 
+	//---------------------------------------------------------------------------------
+	// Creates the renderer, collision manager, my resource manager and my state
+	// manager then registers all possible states and pushes my spash screen state.
+	// 
+	// Return:
+	// 		Returns true.
+	//---------------------------------------------------------------------------------
 	virtual bool startup();
+
+	//---------------------------------------------------------------------------------
+	// Deletes and destroys all managers, states etc... to prevent memory leaks.
+	//---------------------------------------------------------------------------------
 	virtual void shutdown();
 
+	//---------------------------------------------------------------------------------
+	// Updates the state machine and checks if the user has clicked the end key and
+	// ends the game.
+	// 
+	// Param:
+	// 		deltaTime: delta time simply is seconds as a float value. It is passed into 
+	// the state machine's update function.
+	//---------------------------------------------------------------------------------
 	virtual void update(float deltaTime);
+
+	//---------------------------------------------------------------------------------
+	// Clears the screen then begins the 2d renderer then draws the state machine
+	// by passing in the 2d renderer, finally ending the 2d renderer.
+	//---------------------------------------------------------------------------------
 	virtual void draw();
 
 private:

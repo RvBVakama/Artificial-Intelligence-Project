@@ -2,6 +2,7 @@
 #include <vector>
 #include <math.h>
 #include "AStarNode.h"
+
 using namespace std;
 
 class Heap

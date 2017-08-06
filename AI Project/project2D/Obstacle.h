@@ -1,37 +1,34 @@
 //--------------------------------------------------------------------------------------
-// Class for Player_Mouse
+// Class for Obstacles
 //--------------------------------------------------------------------------------------
 #pragma once
 #include "Agent.h"
 #include "Renderer2D.h"
-#include <vector>
 
 using namespace aie;
 
-class AIStateMachine;
-class stateMovement;
-class stateIdle;
-
 //--------------------------------------------------------------------------------------
-// Player_Mouse object
-// The the player that handles seeking and fleeing from the mouse cursor
+// Obstacle object
+// Draws a circle that renders atop each circle collision avoidance area thus 
+// representing where the player can collide.
 //--------------------------------------------------------------------------------------
-class Player_Mouse : public Agent
+class Obstacle : public Agent
 {
 public:
 
 	//--------------------------------------------------------------------------------------
-	// Default Constructor // Creating states and pushing the first one.
+	// Default Constructor
 	//--------------------------------------------------------------------------------------
-	Player_Mouse();
+	Obstacle();
 
 	//--------------------------------------------------------------------------------------
 	// Default Destructor
 	//--------------------------------------------------------------------------------------
-	~Player_Mouse();
+	~Obstacle();
 
 	//--------------------------------------------------------------------------------------
-	// If the player presses and holds a defined key the current state will chagne.
+	// If the obstacle had a behaviour or moved or did aything dynamic it would be 
+	// calculated here.
 	//
 	// Param:
 	//		fDeltaTime: DeltaTime keeps time in seconds.
@@ -39,15 +36,10 @@ public:
 	void Update(float deltaTime);
 
 	//--------------------------------------------------------------------------------------
-	// Drawing the current state.
+	// Draws the path that the AStar pathfinding calulated.
 	//
 	// Param:
 	//		pRenderer2D: A pointer to the 2D rendering engine.
 	//--------------------------------------------------------------------------------------
 	void Draw(Renderer2D* pRenderer2D);
-
-private:
-	AIStateMachine*		m_pAIStateMachine;
-	stateMovement*		m_pstateMovement;
-	stateIdle*			m_pStateIdle;
 };

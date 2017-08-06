@@ -4,6 +4,9 @@
 
 Grid* Grid::m_grid = nullptr;
 
+//--------------------------------------------------------------------------------------
+// Default Constructor // Calculates the grid based on Dijkstra's algorithm
+//--------------------------------------------------------------------------------------
 Grid::Grid()
 {
 	m_ppGrid = new GridNode*[GRID_SIZE * GRID_SIZE];
@@ -61,7 +64,7 @@ Grid::Grid()
 					continue;
 
 				int localIndex = (localY * GRID_SIZE) + localX;
-				//int i = ((y + (a - 2)) * GRID_SIZE) + (x + (a-1));
+
 				GridNode* adjNode = m_ppGrid[localIndex];
 
 				// Connect adjacency
@@ -98,7 +101,7 @@ Grid::Grid()
 					continue;
 
 				int localIndex = (localY * GRID_SIZE) + localX;
-				//int i = ((y + (a - 2)) * GRID_SIZE) + (x + (a-1));
+
 				GridNode* adjNode = m_ppGrid[localIndex];
 
 				// Connect adjacency
@@ -113,7 +116,9 @@ Grid::Grid()
 	}
 }
 
-
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 Grid::~Grid()
 {
 	for (int i = 0; i < GRID_SIZE * GRID_SIZE; ++i)
@@ -124,8 +129,20 @@ Grid::~Grid()
 	delete[] m_ppGrid;
 }
 
+//--------------------------------------------------------------------------------------
+// Draws the grid.
+//
+// Param:
+//		eType: The type of the weapon the player currently has equipped.
+//		level: The player's current level.
+//		bonus: Any bonus damage from buffs.
+// Return:
+//		Returns an int containing the total damage the player will do with next attack.
+//--------------------------------------------------------------------------------------
 void Grid::Draw(Renderer2D* m_2dRenderer)
 {
+	// Draws the grid
+
 	for (int i = 0; i < GRID_SIZE * GRID_SIZE; ++i)
 	{
 		if (m_ppGrid[i]->m_bBlocked)
@@ -137,21 +154,30 @@ void Grid::Draw(Renderer2D* m_2dRenderer)
 		float y = m_ppGrid[i]->m_v2Pos.y;
 		m_2dRenderer->drawBox(x, y, NODE_SIZE - GRID_SPACING, NODE_SIZE - GRID_SPACING, 0, 100);
 
-		//for (size_t a = 0; a < m_ppGrid[i]->m_AdjacentList.size(); ++a)
-		//{
+		//draws lines showing where the path can go
 
-		//	GridNode* otherNode = ((GridNode*)m_ppGrid[i]->m_AdjacentList[a]->m_pEndNode);
+		/*for (size_t a = 0; a < m_ppGrid[i]->m_AdjacentList.size(); ++a)
+		{
 
-		//	float otherX = otherNode->m_v2Pos.x;
-		//	float otherY = otherNode->m_v2Pos.y;
-		//	//m_2dRenderer->setRenderColour(0xFF0000FF);
-		//	//m_2dRenderer->drawLine(x, y, otherX, otherY, EDGE_THICKNESS);
-		//	//m_2dRenderer->setRenderColour(0xFFFFFFFF);
-		//}
+			GridNode* otherNode = ((GridNode*)m_ppGrid[i]->m_AdjacentList[a]->m_pEndNode);
 
+			float otherX = otherNode->m_v2Pos.x;
+			float otherY = otherNode->m_v2Pos.y;
+			m_2dRenderer->setRenderColour(0xFF0000FF);
+			m_2dRenderer->drawLine(x, y, otherX, otherY, EDGE_THICKNESS);
+			m_2dRenderer->setRenderColour(0xFFFFFFFF);
+		}*/
 	}
 }
 
+//--------------------------------------------------------------------------------------
+// Returns a node specified by the passed in index.
+//
+// Param:
+//		index: The node to be returned out.
+// Return:
+//		Returns the node at the passed in index.
+//--------------------------------------------------------------------------------------
 GridNode* Grid::GetNode(int index)
 {
 	return m_ppGrid[index];

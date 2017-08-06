@@ -5,6 +5,7 @@
 //------------------------------------------------
 #define SCREENX 900
 #define SCREENY 900
+#define SLOW_MOTION 1
 
 //------------------------------------------------
 // AStar Grid Values
@@ -37,6 +38,12 @@
 //------------------------------------------------
 #define MAX_SEE_AHEAD 100.0f
 #define MAX_AVOID_FORCE 30.0f
+
+//------------------------------------------------
+// Obstacle Values
+//------------------------------------------------
+#define OBSTACLE_COUNT 10
+#define OBSTACLE_RADIUS 100
 
 //------------------------------------------------
 // List of some state/s that are used in the app

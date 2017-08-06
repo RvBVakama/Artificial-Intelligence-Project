@@ -1,3 +1,6 @@
+//--------------------------------------------------------------------------------------
+// Class for the EBehaviourResult
+//--------------------------------------------------------------------------------------
 #pragma once
 #include <vector>
 
@@ -6,6 +9,9 @@ class IBehaviour;
 
 using namespace std;
 
+//--------------------------------------------------------------------------------------
+// An enum list of the possible outcomes of the behaviour tree
+//--------------------------------------------------------------------------------------
 enum EBehaviourResult
 {
 	EBEHAVIOUR_FAILURE,
@@ -13,6 +19,11 @@ enum EBehaviourResult
 	EBEHAVIOUR_PENDING
 };
 
+//--------------------------------------------------------------------------------------
+// BehaviourNode object
+// Based on conditions and selector or sequence methods the tree will 
+// update the correct behaviour.
+//--------------------------------------------------------------------------------------
 class BehaviourNode
 {
 public:

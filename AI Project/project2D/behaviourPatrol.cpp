@@ -4,6 +4,9 @@
 #include "Player_PathFind.h"
 #include "Define.h"
 
+//----------------------------------------------------------------------------------------
+// A heuritic that allows for AStar to plot a path on diagonals aswell as straights.
+//----------------------------------------------------------------------------------------
 int DiagonalHeurisitic(AStarNode* pNode, AStarNode* pEnd)
 {
 	//Diagonal Shortcut Method
@@ -19,6 +22,9 @@ int DiagonalHeurisitic(AStarNode* pNode, AStarNode* pEnd)
 		return (DIAGONAL_COST * difX) + ADJACENT_COST * (difY - difX);
 }
 
+//----------------------------------------------------------------------------------------
+// Default Constructor // Creates a grid, sets the heurisitic and sets the next node to 0.
+//----------------------------------------------------------------------------------------
 behaviourPatrol::behaviourPatrol()
 {
 	//Setup AStar
@@ -29,11 +35,25 @@ behaviourPatrol::behaviourPatrol()
 	m_nNextNode = 0;
 }
 
+//----------------------------------------------------------------------------------------
+// Default Destructor // Deletes the instance of AStar.
+//----------------------------------------------------------------------------------------
 behaviourPatrol::~behaviourPatrol()
 {
 	delete m_pAStar;
 }
 
+//--------------------------------------------------------------------------------------
+// Moves the player along the AStar path by setting the velocity of the player 
+// based on the path.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get the 
+//				player's start node, end node and position.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+// Return:
+//		Returns the wander velocity force to be applied to the player, as a Vector2.
+//--------------------------------------------------------------------------------------
 Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 {
 	m_path.clear();
@@ -58,9 +78,16 @@ Vector2 behaviourPatrol::Calculate(Agent* pAgent, float deltaTime)
 
 	Vector2 dir = dest - pAgent->GetPosition();
 	dir.Normalise();
+
 	return dir * 200.0f * deltaTime;
 }
 
+//--------------------------------------------------------------------------------------
+// Draws the path that the AStar pathfinding calulated.
+//
+// Param:
+//		pRenderer2D: A pointer to the 2D rendering engine.
+//--------------------------------------------------------------------------------------
 void behaviourPatrol::OnDraw(Renderer2D* pRenderer2D)
 {
 	// Draw Path

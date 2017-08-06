@@ -4,12 +4,18 @@
 #include "Agent.h"
 #include "Input.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor // Weighting between behaviours.
+//--------------------------------------------------------------------------------------
 DecisionWander::DecisionWander()
 {
 	m_BehaviourList.push_back(new behaviourWander(500.00f));
 	m_BehaviourList.push_back(new SeekBehaviour(60.00f));
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 DecisionWander::~DecisionWander()
 {
 	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
@@ -18,6 +24,13 @@ DecisionWander::~DecisionWander()
 	}
 }
 
+//--------------------------------------------------------------------------------------
+// Calculating the force the player needs to seek and wander.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get the players position and velocity.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+//--------------------------------------------------------------------------------------
 void DecisionWander::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_U))

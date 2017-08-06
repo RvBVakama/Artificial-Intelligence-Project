@@ -4,12 +4,18 @@
 #include "Agent.h"
 #include "Input.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor // Weighting between 2 behaviours.
+//--------------------------------------------------------------------------------------
 DecisionArrive::DecisionArrive()
 {
 	m_BehaviourList.push_back(new behaviourArrive(0.50f));
 	m_BehaviourList.push_back(new FleeBehaviour(0.50f));
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 DecisionArrive::~DecisionArrive()
 {
 	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
@@ -19,7 +25,14 @@ DecisionArrive::~DecisionArrive()
 	//help //cannot step out of function, creating memory leaks.
 }
 
-void DecisionArrive::MakeDecision(Agent * pAgent, float fDeltaTime)
+//--------------------------------------------------------------------------------------
+// Changes the amount of weighting on each behaviour if keys are pressed. Then updates.
+//
+// Param:
+//		pAgent: A pointer to the agent so we can get and set the players position.
+//		fDeltaTime: DeltaTime keeps time in seconds.
+//--------------------------------------------------------------------------------------
+void DecisionArrive::MakeDecision(Agent* pAgent, float fDeltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_F))
 	{

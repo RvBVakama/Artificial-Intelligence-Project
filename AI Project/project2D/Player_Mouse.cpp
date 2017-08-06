@@ -4,9 +4,11 @@
 #include "stateIdle.h"
 #include "Define.h"
 #include "Renderer2D.h"
-#include "GridNode.h"
 #include "Input.h"
 
+//--------------------------------------------------------------------------------------
+// Default Constructor // Creating states and pushing the first one.
+//--------------------------------------------------------------------------------------
 Player_Mouse::Player_Mouse()
 {
 	m_v2Pos.x = 400.0f;
@@ -28,6 +30,9 @@ Player_Mouse::Player_Mouse()
 	m_pAIStateMachine->PushState(E_STATEMOVEMENT);
 }
 
+//--------------------------------------------------------------------------------------
+// Default Destructor
+//--------------------------------------------------------------------------------------
 Player_Mouse::~Player_Mouse()
 {
 	delete m_pStateIdle;
@@ -35,6 +40,12 @@ Player_Mouse::~Player_Mouse()
 	delete m_pAIStateMachine;
 }
 
+//--------------------------------------------------------------------------------------
+// If the player presses and holds a defined key the current state will chagne.
+//
+// Param:
+//		fDeltaTime: DeltaTime keeps time in seconds.
+//--------------------------------------------------------------------------------------
 void Player_Mouse::Update(float deltaTime)
 {
 	if (Input::getInstance()->isKeyDown(INPUT_KEY_S))
@@ -50,6 +61,12 @@ void Player_Mouse::Update(float deltaTime)
 	m_pAIStateMachine->Update(this, deltaTime);
 }
 
+//--------------------------------------------------------------------------------------
+// Drawing the current state.
+//
+// Param:
+//		pRenderer2D: A pointer to the 2D rendering engine.
+//--------------------------------------------------------------------------------------
 void Player_Mouse::Draw(Renderer2D* pRenderer2D)
 {
 	m_pAIStateMachine->Draw(pRenderer2D);

@@ -1,21 +1,21 @@
-#include "ActionControl.h"
-#include "behaviourWander.h"
-#include "behaviourKeyboard.h"
+#include "ActionSeekandAvoid.h"
+#include "SeekBehaviour.h"
+#include "obstacleAvoidanceBehaviour.h"
 #include "Agent.h"
 
 //--------------------------------------------------------------------------------------
-// Default Constructor // Weighting between 2 behaviours.
+// Default Constructor // Weighting between 2 behaviours
 //--------------------------------------------------------------------------------------
-ActionControl::ActionControl()
+ActionSeekandAvoid::ActionSeekandAvoid()
 {
-	m_BehaviourList.push_back(new behaviourKeyboard(380.0f));
-	m_BehaviourList.push_back(new behaviourWander(500.00f));
+	m_BehaviourList.push_back(new SeekBehaviour(100.00f));
+	m_BehaviourList.push_back(new obstacleAvoidanceBehaviour(1000.0f));
 }
 
 //--------------------------------------------------------------------------------------
 // Default Destructor
 //--------------------------------------------------------------------------------------
-ActionControl::~ActionControl()
+ActionSeekandAvoid::~ActionSeekandAvoid()
 {
 	for (unsigned int i = 0; i < m_BehaviourList.size(); ++i)
 	{
@@ -24,15 +24,13 @@ ActionControl::~ActionControl()
 }
 
 //--------------------------------------------------------------------------------------
-// Performing calculation on the beahaviours and their weighting and returns SUCCESS. 
+// Based on the weighting this function makes the player seek and avoid collision zones.
 //
 // Param:
 //		pAgent: A pointer to the agent so we can get and set the players position.
 //		fDeltaTime: DeltaTime keeps time in seconds.
-// Return:
-//		Returns EBEHAVIOUR_SUCCESS if the function ran.
 //--------------------------------------------------------------------------------------
-EBehaviourResult ActionControl::Execute(Agent* pAgent, float fDeltaTime)
+EBehaviourResult ActionSeekandAvoid::Execute(Agent* pAgent, float fDeltaTime)
 {
 	Vector2 v2Velocity = pAgent->GetVelocity();
 
@@ -42,19 +40,20 @@ EBehaviourResult ActionControl::Execute(Agent* pAgent, float fDeltaTime)
 		Vector2 v2Force = m_BehaviourList[i]->Calculate(pAgent, fDeltaTime);
 		v2TotalForce = v2TotalForce + v2Force * m_BehaviourList[i]->m_fWeighting;
 
-		if (v2TotalForce.Magnitude() > 1000.0f)
+		if (v2TotalForce.Magnitude() > 500.0f)
 		{
 			v2TotalForce.Normalise();
-			v2TotalForce = v2TotalForce * 1000.0f;
+			v2TotalForce = v2TotalForce * 500.0f;
 			break;
 		}
 	}
 
-	v2Velocity = v2Velocity + v2TotalForce * 10.0f * fDeltaTime;
-	if (v2Velocity.Magnitude() > 60.0f)
+	v2Velocity = v2Velocity + v2TotalForce * 15.0f * fDeltaTime;
+
+	if (v2Velocity.Magnitude() > 250.0f)
 	{
 		v2Velocity.Normalise();
-		v2Velocity = v2Velocity * 60.0f;
+		v2Velocity = v2Velocity * 250.0f;
 	}
 
 	pAgent->SetPosition(pAgent->GetPosition() + v2Velocity * fDeltaTime);
